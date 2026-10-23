@@ -78,3 +78,17 @@ __pycache__/
 !/evidence/deployment/
 /evidence/deployment/*
 !/evidence/deployment/store-verification.json
+
+# Verified public deployment and project cover
+!/evidence/deployment/final-developer-tests.tap
+!/evidence/deployment/public-acceptance-summary.json
+!/evidence/deployment/public-accepted-r1.json
+!/evidence/deployment/public-accepted-r1.csv
+!/evidence/deployment/public-accepted-r1.txt
+!/evidence/deployment/public-accepted-full.png
+!/evidence/deployment/public-live-sources.png
+!/evidence/deployment/public-run-details.png
+!/evidence/deployment/public-mobile.png
+!/evidence/deployment/public-mobile-layout.json
+!/submission/crewlift-thumbnail.png
+!/submission/crewlift-thumbnail.svg

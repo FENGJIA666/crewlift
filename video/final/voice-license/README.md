@@ -1,8 +1,8 @@
 # Public narration source and license
 
-The public CrewLift demo uses **Kokoro-82M v1.0**, the official **af_heart** American English preset, generated locally with the `kokoro` inference library. No Apple system voice, cloned person, third-party voice recording, or paid voice service is included in the public MP4.
+The public CrewLift demo uses **Kokoro-82M v1.0**, the official **af_heart** American English preset, generated locally with the `kokoro` inference library. The narration uses the original preset and the project’s original script.
 
-The official model repository declares **Apache License 2.0** and describes production use. Its official voice catalog lists af_heart as an American English preset. The publisher's inference code also carries Apache License 2.0. Section 2 grants public performance and distribution rights subject to the license terms. We selected this stack for public distribution of the generated narration; it is not subject to the Apple System Voices license. The underlying code and model weights are not bundled with the public video.
+The official model repository declares **Apache License 2.0** and describes production use. Its official voice catalog lists af_heart as an American English preset. The publisher's inference code also carries Apache License 2.0. Section 2 grants public performance and distribution rights subject to the license terms. We selected this stack for public distribution of the generated narration. The underlying code and model weights are not bundled with the public video.
 
 ## Authoritative sources
 

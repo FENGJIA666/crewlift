@@ -2,9 +2,15 @@
 
 Recorded on 24 October 2026, Singapore time. Makers Morning is a fictional eight-person event used to demonstrate and verify CrewLift's coordination workflow.
 
-## From a written change to a complete handoff
+## Public application acceptance
 
-The final live demonstration uses **NVIDIA Nemotron (`nvidia/Nemotron-3_5-Lightning`) through Nebius Token Factory**. The model extracts three intended changes and their complete supporting clauses. CrewLift validates the rules, computes two recovery options, accepts the selected plan as revision one, and produces matching JSON, CSV and personal handoff exports.
+The [deployed CrewLift application](https://crewlift-two.vercel.app) passed an actual browser workflow: real NVIDIA Nemotron inference through Nebius Token Factory, four source-linked planning rules, comparison of both recovery plans, revision-one acceptance and downloads in all three formats. The selected plan covers **10/10 places**, retains **seven original assignments** and changes **three people's plans**. The same application was checked at a 390 × 844 mobile viewport with no horizontal document overflow.
+
+The [public acceptance summary](../evidence/deployment/public-acceptance-summary.json) records the model, input/output fingerprints, source passages, plan metrics and download hashes. Inspect its downloaded [JSON plan](../evidence/deployment/public-accepted-r1.json), [CSV roster](../evidence/deployment/public-accepted-r1.csv), [handoff brief](../evidence/deployment/public-accepted-r1.txt) and [accepted-plan capture](../evidence/deployment/public-accepted-full.png).
+
+## Recorded video: from a written change to a complete handoff
+
+The [2:42 video demonstration](https://www.youtube.com/watch?v=EKHJzui2v2w) uses **NVIDIA Nemotron (`nvidia/Nemotron-3_5-Lightning`) through Nebius Token Factory**. The model extracts three intended changes and their complete supporting clauses. CrewLift validates the rules, computes two recovery options, accepts the selected plan as revision one, and produces matching JSON, CSV and personal handoff exports.
 
 | Selected-plan result | Verified value |
 | --- | --- |
@@ -27,11 +33,12 @@ An affected person is any volunteer whose set of task IDs differs from the compa
 
 ## Independent product checks
 
-| Recorded check family | Result | Evidence |
+| Check family | Result | Evidence |
 | --- | --- | --- |
 | Independent solver cases | **95 passed** | [Solver report](../evidence/solver-verification.json) |
 | Exhaustive comparisons | **128,764 feasible rosters** across the compared cases | [Solver report](../evidence/solver-verification.json) |
-| Development tests | **24 passed** in the recorded product verification | [Test results](../evidence/developer-tests.tap) |
+| Current development tests | **33 passed** for the deployed release | [Current test results](../evidence/deployment/final-developer-tests.tap) |
+| Recorded video test milestone | **24 passed** at recording | [Recorded test results](../evidence/developer-tests.tap) |
 | HTTP workflow groups | **10 passed** | [Workflow report](../evidence/api-verification.json) |
 
 The independent oracle rebuilds requirements from raw constraints and checks skills, availability, simultaneous assignments, capacity and preserved roles. It compares objective values without importing the production scoring or optimization helpers. The exhaustive comparisons cover 91 small cases and the default full demonstration; three additional full demonstration cases receive independent validity and metric audits.

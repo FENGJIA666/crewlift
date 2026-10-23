@@ -12,10 +12,11 @@ CrewLift connects a plain-language event update to a complete team plan. NVIDIA 
 
 ## LinkedIn-style project highlights
 
+- Published the [CrewLift web app](https://crewlift-two.vercel.app), with a verified public browser workflow from real inference through all three action-pack downloads.
 - Built **CrewLift**, a complete workflow from real **NVIDIA Nemotron inference on Nebius Token Factory** to optimized rosters, accepted revisions and personal handoffs.
 - Achieved **10-of-10 coverage** in the fictional Makers Morning live demonstration while retaining **seven original assignments** and limiting plan changes to **three people**.
 - Established the sample's minimum affected crew through an independent exhaustive comparison of **124,740 feasible complete or partial rosters**.
-- Verified **95 independent solver cases**, **24 development tests** and **10 HTTP workflow groups**, covering optimization, successive revisions and versioned exports.
+- Verified **95 independent solver cases**, **33 development tests** and **10 HTTP workflow groups**, covering optimization, successive revisions and versioned exports.
 - Delivered a verified live action pack: a JSON plan, **10-row roster CSV** and **three personal handoff cards** with roles, rooms, times and change reasons.
 - Verified a second accepted recovery in separate local continuation checks, preserving full coverage and correct personal changes from the team's previous plan.
 
@@ -27,7 +28,7 @@ NVIDIA Nemotron through Nebius Token Factory turns a written event update into s
 
 In the fictional Makers Morning live demonstration, the result is concrete: all 10 required places covered, seven original assignments preserved and three people to update.
 
-Independent checks confirm the sample's minimum affected crew, backed by 95 solver cases, 24 development tests and 10 HTTP workflow groups.
+Independent checks confirm the sample's minimum affected crew, backed by 95 solver cases, 33 development tests and 10 HTTP workflow groups.
 
 Every change. A stronger plan.
 
@@ -45,7 +46,7 @@ Use numerical captions alongside the Makers Morning sample label. The three-pers
 
 ## Claim-to-evidence map
 
-The [verification summary](verification_summary.md) documents the algorithm, independent checks and local continuation results. The [final live browser verification](../evidence/live/final-ui-independent-verification.json) documents the real model identity, three source clauses, accepted plan and matching exports.
+The [verification summary](verification_summary.md) documents the algorithm, independent checks and local continuation results. The [public browser acceptance](../evidence/deployment/public-acceptance-summary.json) documents the deployed model identity, four source-linked rules, accepted plan and matching downloads. The [recorded video run](../evidence/live/final-ui-independent-verification.json) preserves the earlier demonstration.
 
 | Public achievement | Source claim or report section |
 | --- | --- |
@@ -53,7 +54,7 @@ The [verification summary](verification_summary.md) documents the algorithm, ind
 | Three affected people is the sample optimum | [Independent solver report](../evidence/solver-verification.json) |
 | Two complete-coverage alternatives | [Same-run balanced plan](../evidence/live/final-ui-balanced-plan.json) |
 | 95 independent solver cases | [Independent solver report](../evidence/solver-verification.json) |
-| 24 development tests; 10 HTTP workflow groups | [Recorded checks](verification_summary.md#independent-product-checks) |
+| 33 development tests; 10 HTTP workflow groups | [Current checks](verification_summary.md#independent-product-checks) |
 | Correct second accepted revision, locally verified | [HTTP continuation checks](../evidence/api-verification.json) |
 | Matching versioned exports | [HTTP export checks](../evidence/api-verification.json) |
 | Real NVIDIA inference and complete live workflow | [Final live browser verification](../evidence/live/final-ui-independent-verification.json) and [isolated live acceptance](../evidence/live/verification-2026-10-23T16-50-14.475Z.json) |

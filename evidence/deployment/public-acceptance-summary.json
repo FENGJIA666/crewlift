@@ -1,0 +1,157 @@
+{
+  "verifiedAtUtc": "2026-10-23T18:15:26.758132+00:00",
+  "publicUrl": "https://crewlift-two.vercel.app/",
+  "loginRequired": false,
+  "script": [
+    "Open the public app in a fresh dedicated tab.",
+    "Use the default Ava / two facilitators / keep Chloe brief.",
+    "Click Use Nemotron once on the corrected deployment.",
+    "Expand source clauses and verify four original brief passages.",
+    "Select balanced plan, observe its metrics, then select minimal-change plan.",
+    "Click Use this plan; observe Accepted revision 1.",
+    "Open Run details; observe model, provider, run ID, tokens and hashes.",
+    "Download Plan JSON, Roster CSV and action brief using the actual UI.",
+    "Verify the downloaded run IDs and revision agree.",
+    "Inspect public app at 390x844; restore default viewport and keep app tab as deliverable."
+  ],
+  "brief": "Ava cannot attend any of the three shifts. The creative workshop in Studio A needs two facilitators from 10:00 to 11:00. Keep Chloe on the 09:00 gallery tour.",
+  "providerObservedInUi": "NVIDIA Nemotron via Nebius Token Factory",
+  "run": {
+    "id": "95c8570f-c91e-4c75-953a-3123a3091800",
+    "createdAt": "2026-10-23T18:11:32.295Z",
+    "durationMs": 2105,
+    "inferenceDurationMs": 1703,
+    "model": "nvidia/Nemotron-3_5-Lightning",
+    "requestedModel": "nvidia/Nemotron-3_5-Lightning",
+    "returnedModel": "nvidia/Nemotron-3_5-Lightning",
+    "usage": {
+      "prompt_tokens": 1177,
+      "completion_tokens": 275,
+      "total_tokens": 1452
+    },
+    "provider": {
+      "requestedModel": "nvidia/Nemotron-3_5-Lightning",
+      "returnedModel": "nvidia/Nemotron-3_5-Lightning",
+      "finishReason": "stop",
+      "contentType": "string",
+      "contentCharacters": 796,
+      "reasoningCharacters": 0,
+      "reasoningTokens": 0,
+      "usage": {
+        "prompt_tokens": 1177,
+        "completion_tokens": 275,
+        "total_tokens": 1452
+      },
+      "durationMs": 1703,
+      "requestedThinking": false
+    },
+    "baselineRevision": {
+      "id": "baseline-148aa024-bf21-4c46-9979-18b9b476123b",
+      "number": 0,
+      "acceptedAt": null,
+      "runId": null,
+      "planId": null
+    },
+    "inputHash": "ecbd2a0ab5875fd4298916c57f3c80a9fc37a2aab341c874b3c03ca66145a06e",
+    "outputHash": "bf6e022ed6251f2a6b46611ac3db9962ff2198d2f2a1f3f254e585a8f6f5e4de"
+  },
+  "acceptedRevision": {
+    "id": "c0031668-c5e3-454b-808b-9410e019ca53",
+    "number": 1,
+    "acceptedAt": "2026-10-23T18:12:10.255Z",
+    "runId": "95c8570f-c91e-4c75-953a-3123a3091800",
+    "planId": "minimal-change"
+  },
+  "minimalPlanMetrics": {
+    "coveragePct": 100,
+    "coveredSeats": 10,
+    "requiredSeats": 10,
+    "conflicts": 0,
+    "changedPeople": 3,
+    "retainedAssignments": 7,
+    "changedAssignments": 5,
+    "maxLoad": 3,
+    "minLoad": 0,
+    "workloadSpread": 3,
+    "loadSquaredSum": 24,
+    "hoursTotal": 10
+  },
+  "balancedMetricsObservedInUi": {
+    "coveragePct": 100,
+    "coveredSeats": 10,
+    "requiredSeats": 10,
+    "retainedAssignments": 5,
+    "changedPeople": 7,
+    "conflicts": 0,
+    "workloadSpread": 1
+  },
+  "sourceKinds": [
+    "unavailable",
+    "demand",
+    "locked",
+    "skillRequirements"
+  ],
+  "sourceClauses": [
+    "Ava cannot attend any of the three shifts.",
+    "The creative workshop in Studio A needs two facilitators from 10:00 to 11:00.",
+    "Keep Chloe on the 09:00 gallery tour.",
+    "The creative workshop in Studio A needs two facilitators from 10:00 to 11:00."
+  ],
+  "openQuestions": 0,
+  "downloads": {
+    "jsonRunIdMatchesUi": true,
+    "csvRunIdMatchesUi": true,
+    "briefRunIdMatchesUi": true,
+    "csvRows": 10,
+    "revision": 1
+  },
+  "mobile": {
+    "bodyWidth": 390,
+    "documentWidth": 390,
+    "viewportHeight": 844,
+    "viewportWidth": 390
+  },
+  "evidenceFiles": [
+    {
+      "file": "public-accepted-r1.json",
+      "bytes": 16453,
+      "sha256": "0c54f1095d4d5e049c2a53b05c330a8d04b3bb1d0cfbbadd42fe78b4cc8bd694"
+    },
+    {
+      "file": "public-accepted-r1.csv",
+      "bytes": 1740,
+      "sha256": "2cef8ae1bb94a1c89b74a3106e86511a40b307bb89c8462cd161ab22bb27e10a"
+    },
+    {
+      "file": "public-accepted-r1.txt",
+      "bytes": 1565,
+      "sha256": "7db2783aff32e9b508ec16f321c34a4f5618c9f8c952c594dedbdfc2568dce6e"
+    },
+    {
+      "file": "public-accepted-full.png",
+      "bytes": 191419,
+      "sha256": "0e805f9a2cdd0357cec3ab97336418075b79c1b0db0bec982f1e7f840dc71fbb"
+    },
+    {
+      "file": "public-live-sources.png",
+      "bytes": 90373,
+      "sha256": "69a66c1945fb13872bf4459f1c6e809f52e024bfd999e2806841939e4c190fa7"
+    },
+    {
+      "file": "public-run-details.png",
+      "bytes": 57080,
+      "sha256": "1e937c0a28d882b4b4384930f4d73b3868435e367ef0cb1e9952de585cf6fd2f"
+    },
+    {
+      "file": "public-mobile.png",
+      "bytes": 46236,
+      "sha256": "53b14f3860101923433c1e66aeb4bc6712caa38bde0c51f204d0e22cd2ff3ad8"
+    },
+    {
+      "file": "public-mobile-layout.json",
+      "bytes": 95,
+      "sha256": "a586a8cda008d7f2b3008470877cc6932c397897061be5aeaac9aaf69c1dd331"
+    }
+  ],
+  "verificationScope": "Actual public browser workflow: live model interpretation, source inspection, plan comparison, accepted revision, three downloads and responsive layout."
+}

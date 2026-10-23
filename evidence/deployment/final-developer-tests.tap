@@ -1,0 +1,212 @@
+
+> crewlift@0.1.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: API runs, accepts, revises, rejects stale acceptance and exports both revisions
+ok 1 - API runs, accepts, revises, rejects stale acceptance and exports both revisions
+  ---
+  duration_ms: 107.684292
+  type: 'test'
+  ...
+# Subtest: reset creates a fresh baseline and clears prior run authority
+ok 2 - reset creates a fresh baseline and clears prior run authority
+  ---
+  duration_ms: 22.314917
+  type: 'test'
+  ...
+# Subtest: live mode cannot report inference without a key
+ok 3 - live mode cannot report inference without a key
+  ---
+  duration_ms: 2.651208
+  type: 'test'
+  ...
+# Subtest: partial coverage stays reviewable and cannot become an accepted full roster
+ok 4 - partial coverage stays reviewable and cannot become an accepted full roster
+  ---
+  duration_ms: 30.050666
+  type: 'test'
+  ...
+# Subtest: public users remain isolated across worker instances, reset and exports
+ok 5 - public users remain isolated across worker instances, reset and exports
+  ---
+  duration_ms: 52.869
+  type: 'test'
+  ...
+# Subtest: public requests require the published host, same origin and untampered session
+ok 6 - public requests require the published host, same origin and untampered session
+  ---
+  duration_ms: 3.992
+  type: 'test'
+  ...
+# Subtest: one session cannot reset during inference while another can continue planning
+ok 7 - one session cannot reset during inference while another can continue planning
+  ---
+  duration_ms: 38.504167
+  type: 'test'
+  ...
+# Subtest: global allocation applies before inference across sessions and survives new workers
+ok 8 - global allocation applies before inference across sessions and survives new workers
+  ---
+  duration_ms: 31.604583
+  type: 'test'
+  ...
+# Subtest: zero allocation, missing ledger and failed inference never create extra paid attempts
+ok 9 - zero allocation, missing ledger and failed inference never create extra paid attempts
+  ---
+  duration_ms: 6.285458
+  type: 'test'
+  ...
+# Subtest: Redis fencing rejects writes after lease loss and hides transport errors
+ok 10 - Redis fencing rejects writes after lease loss and hides transport errors
+  ---
+  duration_ms: 1.0755
+  type: 'test'
+  ...
+# Subtest: oversized inference payload is rejected before network access
+ok 11 - oversized inference payload is rejected before network access
+  ---
+  duration_ms: 0.312333
+  type: 'test'
+  ...
+# Subtest: public pricing and payload shape enforce the documented conservative cost boundary
+ok 12 - public pricing and payload shape enforce the documented conservative cost boundary
+  ---
+  duration_ms: 0.286708
+  type: 'test'
+  ...
+# Subtest: golden sources require the corresponding complete support for absence, demand and lock
+ok 13 - golden sources require the corresponding complete support for absence, demand and lock
+  ---
+  duration_ms: 2.472709
+  type: 'test'
+  ...
+# Subtest: observed-model assertion rejects requested-only and mismatched identities
+ok 14 - observed-model assertion rejects requested-only and mismatched identities
+  ---
+  duration_ms: 0.727917
+  type: 'test'
+  ...
+# Subtest: incomplete, negative and inconsistent token usage yields unknown cost
+ok 15 - incomplete, negative and inconsistent token usage yields unknown cost
+  ---
+  duration_ms: 0.130416
+  type: 'test'
+  ...
+# Subtest: CSV and handoff verification checks actual run, revision, assignments and cards
+ok 16 - CSV and handoff verification checks actual run, revision, assignments and cards
+  ---
+  duration_ms: 28.91975
+  type: 'test'
+  ...
+# Subtest: model extraction requires exact brief evidence and known entity IDs
+ok 17 - model extraction requires exact brief evidence and known entity IDs
+  ---
+  duration_ms: 1.104791
+  type: 'test'
+  ...
+# Subtest: missing API key blocks live mode before network access
+ok 18 - missing API key blocks live mode before network access
+  ---
+  duration_ms: 0.241042
+  type: 'test'
+  ...
+# Subtest: response contract explicitly requires source and question arrays; source maps remain rejected
+ok 19 - response contract explicitly requires source and question arrays; source maps remain rejected
+  ---
+  duration_ms: 12.306166
+  type: 'test'
+  ...
+# Subtest: adapter sends the actual NVIDIA model and returns sanitized response metadata (mock transport)
+ok 20 - adapter sends the actual NVIDIA model and returns sanitized response metadata (mock transport)
+  ---
+  duration_ms: 0.623791
+  type: 'test'
+  ...
+# Subtest: live context contains original event data without sample constraint answers
+ok 21 - live context contains original event data without sample constraint answers
+  ---
+  duration_ms: 0.537333
+  type: 'test'
+  ...
+# Subtest: observed model output that invents baseline source quotations is rejected unchanged
+ok 22 - observed model output that invents baseline source quotations is rejected unchanged
+  ---
+  duration_ms: 2.880625
+  type: 'test'
+  ...
+# Subtest: empty or incomplete output preserves only safe provider diagnostics for a bounded retry
+ok 23 - empty or incomplete output preserves only safe provider diagnostics for a bounded retry
+  ---
+  duration_ms: 1.283792
+  type: 'test'
+  ...
+# Subtest: missing and different provider model identities cannot produce a verified live result
+ok 24 - missing and different provider model identities cannot produce a verified live result
+  ---
+  duration_ms: 0.690166
+  type: 'test'
+  ...
+# Subtest: source validation failures retain only whitelisted parsed extraction for diagnosis
+ok 25 - source validation failures retain only whitelisted parsed extraction for diagnosis
+  ---
+  duration_ms: 1.190042
+  type: 'test'
+  ...
+# Subtest: original roster keeps all original tasks without changing a person
+ok 26 - original roster keeps all original tasks without changing a person
+  ---
+  duration_ms: 36.347875
+  type: 'test'
+  ...
+# Subtest: absence and expanded workshop create distinct fully covered outcomes
+ok 27 - absence and expanded workshop create distinct fully covered outcomes
+  ---
+  duration_ms: 17.03325
+  type: 'test'
+  ...
+# Subtest: skill constraint and maximum-shift limit are hard constraints
+ok 28 - skill constraint and maximum-shift limit are hard constraints
+  ---
+  duration_ms: 16.771416
+  type: 'test'
+  ...
+# Subtest: infeasible demand returns legal maximum coverage and explicit missing seats
+ok 29 - infeasible demand returns legal maximum coverage and explicit missing seats
+  ---
+  duration_ms: 30.545458
+  type: 'test'
+  ...
+# Subtest: conflicting preserved assignments are rejected with an actionable code
+ok 30 - conflicting preserved assignments are rejected with an actionable code
+  ---
+  duration_ms: 0.535
+  type: 'test'
+  ...
+# Subtest: unknown entities, malformed counters and duplicate constraints never reach the solver
+ok 31 - unknown entities, malformed counters and duplicate constraints never reach the solver
+  ---
+  duration_ms: 0.128875
+  type: 'test'
+  ...
+# Subtest: independent assignment audit detects overlap, skill and shift-limit violations
+ok 32 - independent assignment audit detects overlap, skill and shift-limit violations
+  ---
+  duration_ms: 0.140167
+  type: 'test'
+  ...
+# Subtest: new locked assignments do not let subset-size pruning overstate the minimum affected crew
+ok 33 - new locked assignments do not let subset-size pruning overstate the minimum affected crew
+  ---
+  duration_ms: 0.690292
+  type: 'test'
+  ...
+1..33
+# tests 33
+# suites 0
+# pass 33
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 228.776375

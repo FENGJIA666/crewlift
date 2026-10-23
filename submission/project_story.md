@@ -38,8 +38,9 @@ For successive updates, each accepted plan becomes the next comparison baseline.
 
 - **A verified model-to-action workflow:** real NVIDIA Nemotron inference through Nebius Token Factory, source-linked rules, two computed plans, an accepted revision and matching exports.
 - **Precisely optimized sample recovery:** 10 of 10 required places covered, seven original assignments retained and three people to update.
+- **A complete public product experience:** the deployed application was verified from real Nemotron inference through accepted revision and all three browser downloads, with a responsive mobile layout.
 - **Personal handoffs with continuity:** a complete action pack from the live browser run, plus two accepted revisions verified in the local continuation checks.
-- **Independent engineering evidence:** 95 solver cases, exhaustive comparisons across 128,764 feasible rosters, 24 development tests and 10 HTTP workflow groups.
+- **Independent engineering evidence:** 95 solver cases, exhaustive comparisons across 128,764 feasible rosters, 33 development tests and 10 HTTP workflow groups.
 
 ## What we learned
 

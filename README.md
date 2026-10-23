@@ -4,17 +4,17 @@
 
 CrewLift turns a plain-language event update into two calculated staffing plans and a complete action pack. **NVIDIA Nemotron through Nebius Token Factory** interprets the change; CrewLift validates the planning rules, optimizes the roster, and prepares clear personal handoffs.
 
-[Watch the 2:42 demo](video/final/crewlift-narrated-demo.mp4) · [Run locally](#run-locally) · [Verified results](submission/verification_summary.md) · [Project story](submission/project_story.md)
+[Try CrewLift](https://crewlift-two.vercel.app) · [Watch the 2:42 demo](https://www.youtube.com/watch?v=EKHJzui2v2w) · [Source on GitHub](https://github.com/FENGJIA666/crewlift) · [Verified results](submission/verification_summary.md) · [Run locally](#run-locally)
 
 | Required places covered | Original assignments retained | People to update |
 | :---: | :---: | :---: |
 | **10 / 10** | **7** | **3** |
 
-![CrewLift's verified Makers Morning recovery](evidence/live/screens/07-live-result-viewport.png)
+![CrewLift: ten places covered, seven assignments retained, three people to update](submission/crewlift-thumbnail.png)
 
-In the verified live **Makers Morning** demonstration, using fictional event data, CrewLift covers **10 of 10 required places**, preserves **seven original assignments**, and updates **three people's plans**—the smallest affected crew compatible with full coverage in this scenario. The coordinator accepts revision one and exports a matching roster CSV, structured JSON plan and personal handoff brief.
+In the verified public **Makers Morning** demonstration, using fictional event data, CrewLift covers **10 of 10 required places**, preserves **seven original assignments**, and updates **three people's plans**—the smallest affected crew compatible with full coverage in this scenario. The coordinator accepts revision one and exports a matching roster CSV, structured JSON plan and personal handoff brief.
 
-The recorded product checks pass **95 independent solver cases**, **24 development tests**, and **10 HTTP workflow groups**. A separate local continuation test verifies a second accepted revision with full coverage and correct personal updates. Explore the [live browser verification](evidence/live/final-ui-independent-verification.json), [achievement summary](submission/achievement_claims.md) and [verification methods and results](submission/verification_summary.md).
+CrewLift passes **95 independent solver cases**, **33 development tests**, and **10 HTTP workflow groups**. The public browser workflow verifies real inference, plan comparison, an accepted revision, all three downloads and a responsive mobile layout. A separate local continuation test verifies a second accepted revision. Explore the [public acceptance evidence](evidence/deployment/public-acceptance-summary.json), [project story](submission/project_story.md) and [verification methods and results](submission/verification_summary.md). The video records the earlier 24-test milestone; the current 33-test suite also covers deployment behavior.
 
 ## Verified NVIDIA workflow
 
@@ -24,7 +24,7 @@ The recorded product checks pass **95 independent solver cases**, **24 developme
 4. Review the roster and personal changes, then accept the chosen plan.
 5. Download the versioned action pack with roles, rooms, times and change reasons.
 
-The provider-returned model is `nvidia/Nemotron-3_5-Lightning`. Both the [isolated live acceptance](evidence/live/verification-2026-10-23T16-50-14.475Z.json) and the [final browser run](evidence/live/final-ui-independent-verification.json) verify the full path. The browser run's exported [action brief](evidence/live/final-ui-accepted-r1-handoff.txt), [CSV roster](evidence/live/final-ui-accepted-r1-plan.csv) and [JSON plan](evidence/live/final-ui-accepted-r1-plan.json) match its accepted revision.
+The provider-returned model is `nvidia/Nemotron-3_5-Lightning`. The [public browser acceptance](evidence/deployment/public-acceptance-summary.json) verifies the complete deployed path. Its downloaded [action brief](evidence/deployment/public-accepted-r1.txt), [CSV roster](evidence/deployment/public-accepted-r1.csv) and [JSON plan](evidence/deployment/public-accepted-r1.json) match the accepted revision. The [recorded video run](evidence/live/final-ui-independent-verification.json) and [isolated live acceptance](evidence/live/verification-2026-10-23T16-50-14.475Z.json) provide separate verified executions.
 
 ## Run locally
 
@@ -52,7 +52,7 @@ The live verification script confirms provider identity, complete source clauses
 
 ## Deploy
 
-The [Vercel deployment guide](DEPLOYMENT.md) covers the public API, persistent per-browser sessions, server-only model configuration and bounded inference requests. The deployment adapter has [verified durable-storage behavior](evidence/deployment/store-verification.json) for independent sessions, concurrent updates and request accounting.
+The public app is available at **[crewlift-two.vercel.app](https://crewlift-two.vercel.app)**. The [Vercel deployment guide](DEPLOYMENT.md) covers the public API, persistent per-browser sessions, server-only model configuration and bounded inference requests. The deployment adapter has [verified durable-storage behavior](evidence/deployment/store-verification.json) for independent sessions, concurrent updates and request accounting.
 
 ## How recovery works
 

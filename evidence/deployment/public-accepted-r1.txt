@@ -1,0 +1,36 @@
+CrewLift | Makers Morning
+Keep plans steady · Accepted revision 1 · Sample scenario · live Nemotron interpretation
+Run: 95c8570f-c91e-4c75-953a-3123a3091800
+Coverage: 10/10 places | Assignment conflicts: 0
+7 original assignments retained | 3 people receive updated plans
+
+10 of 10 required places covered with 0 assignment conflicts.
+7 original assignments retained; 3 people receive an updated plan.
+1 confirmed assignments preserved.
+Exact search finds the smallest affected crew for this scenario.
+
+PERSONAL HANDOFF CARDS
+
+Ava Chen
+Before: Welcome desk · Atrium · 09:00–10:00; Welcome desk · Atrium · 10:00–11:00
+After: No assigned shift
+Updated availability respected.
+
+Emi Park
+Before: Available crew
+After: Welcome desk · Atrium · 09:00–10:00; Welcome desk · Atrium · 10:00–11:00
+Restored coverage while keeping the smallest number of people’s plans in motion.
+
+Gia Santos
+Before: Available crew
+After: Creative workshop · Studio A · 10:00–11:00
+Restored coverage while keeping the smallest number of people’s plans in motion.
+
+SOURCE TRACE
+brief:0 | unavailable | Ava cannot attend any of the three shifts.
+brief:0 | demand | The creative workshop in Studio A needs two facilitators from 10:00 to 11:00.
+brief:0 | locked | Keep Chloe on the 09:00 gallery tour.
+brief:0 | skillRequirements | The creative workshop in Studio A needs two facilitators from 10:00 to 11:00.
+
+Input SHA-256: ecbd2a0ab5875fd4298916c57f3c80a9fc37a2aab341c874b3c03ca66145a06e
+Output SHA-256: bf6e022ed6251f2a6b46611ac3db9962ff2198d2f2a1f3f254e585a8f6f5e4de
