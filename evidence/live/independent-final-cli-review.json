@@ -1,0 +1,19 @@
+{
+  "verifiedAt": "2026-10-23T16:55:41.817Z",
+  "scope": "Independent read-only review of final-adapter sixth live artifact; zero new inference requests",
+  "artifact": "evidence/live/verification-2026-10-23T16-50-14.475Z.json",
+  "sha256": "e9766dcfebb93d4821fa3b5c494af327fba02e03a53b44049409c481210fb0a1",
+  "success": true,
+  "model": "nvidia/Nemotron-3_5-Lightning",
+  "usage": {
+    "prompt_tokens": 1081,
+    "completion_tokens": 210,
+    "total_tokens": 1291
+  },
+  "inferenceDurationMs": 2267,
+  "estimatedTokenChargeUSD": 0.00011526,
+  "sourceHashMatch": true,
+  "exactConstraintsAndFullQuotesMatchFinalUI": true,
+  "exportBoundary": "The sixth artifact stores export hashes and sizes. Independent byte readback is provided by the separate final browser run.",
+  "privacyPatternsFound": 0
+}

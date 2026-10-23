@@ -1,0 +1,84 @@
+{
+  "verifiedAt": "2026-10-23T16:51:15.514Z",
+  "scope": "Isolated local HTTP API; fictional data; explicit empty API key; no external/model requests",
+  "passed": 10,
+  "failed": 0,
+  "elapsedMs": 664.891709,
+  "fingerprints": {
+    "server.mjs": "a1c30221228c642c0e91f7ab81477ccd385a2eb58eebf4b84f7c3e0722c280b8",
+    "lib/export.mjs": "9a7a9941a7e3d4b62ce87aea22e596218cbc7d277825baf3d080a0039f36c6cf",
+    "lib/nebius.mjs": "4ef5cecf6d2dd4b17f63a02def0a1c217268e00a04e68942adbf8b8c426c9c4c",
+    "lib/solver.mjs": "2986d30fd533b6d94c37c60b3e64e92e95eaf8bc35cb67e7afed4b0d7a51d1a7",
+    "lib/constraints.mjs": "e88e7e3b775cb40cbe1fcefa352ab9c2573d4aa7fcb7667f5606354ed77cc08e",
+    "scripts/verify-api.mjs": "aca9def31f043dbe57a5a625ab6196f98883f231b82976c01b5c7b342c1fa9bd"
+  },
+  "records": [
+    {
+      "name": "unconfigured-live-route-is-explicit",
+      "status": "pass",
+      "liveCalls": 0,
+      "liveAvailable": false
+    },
+    {
+      "name": "sample-http-plan-and-structured-source-trace",
+      "status": "pass",
+      "covered": 10,
+      "required": 10,
+      "changedPeople": 3,
+      "sourceCount": 3
+    },
+    {
+      "name": "accept-revision-1-idempotency-and-stale-alternative-rejection",
+      "status": "pass",
+      "revisionNumber": 1
+    },
+    {
+      "name": "omitted-constraints-inherit-accepted-state",
+      "status": "pass",
+      "changedPeople": 0,
+      "absentPersonRestored": false
+    },
+    {
+      "name": "second-disruption-delta-is-from-accepted-revision-1",
+      "status": "pass",
+      "revisionNumber": 2,
+      "covered": 10,
+      "required": 10,
+      "changedPeople": 3,
+      "assignmentChanges": 10,
+      "oracleCandidates": 36135,
+      "absentPeopleRestored": false
+    },
+    {
+      "name": "revision-1-json-csv-handoff-export-readback",
+      "status": "pass",
+      "revisionNumber": 1,
+      "coveredRows": 10,
+      "personalCards": 3
+    },
+    {
+      "name": "revision-2-json-csv-handoff-export-readback",
+      "status": "pass",
+      "revisionNumber": 2,
+      "coveredRows": 10,
+      "personalCards": 3
+    },
+    {
+      "name": "infeasible-http-plan-reports-exact-gaps-and-prevents-acceptance",
+      "status": "pass",
+      "covered": 6,
+      "required": 10,
+      "coveragePct": 60,
+      "missingPlaces": 4,
+      "uncoveredTasks": 3
+    },
+    {
+      "name": "unknown-person-and-unavailable-lock-are-rejected",
+      "status": "pass"
+    },
+    {
+      "name": "reset-restores-original-sample-and-invalidates-old-runs",
+      "status": "pass"
+    }
+  ]
+}

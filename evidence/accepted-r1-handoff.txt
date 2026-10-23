@@ -1,0 +1,35 @@
+CrewLift | Makers Morning
+Keep plans steady · Accepted revision 1 · Sample scenario · local constraint solver
+Run: 7796c620-c92f-4c82-9ccc-a9232a030222
+Coverage: 10/10 places | Assignment conflicts: 0
+7 original assignments retained | 3 people receive updated plans
+
+10 of 10 required places covered with 0 assignment conflicts.
+7 original assignments retained; 3 people receive an updated plan.
+1 confirmed assignments preserved.
+Exact search finds the smallest affected crew for this scenario.
+
+PERSONAL HANDOFF CARDS
+
+Ava Chen
+Before: Welcome desk · Atrium · 09:00–10:00; Welcome desk · Atrium · 10:00–11:00
+After: No assigned shift
+Updated availability respected.
+
+Emi Park
+Before: Available crew
+After: Welcome desk · Atrium · 09:00–10:00; Welcome desk · Atrium · 10:00–11:00
+Restored coverage while keeping the smallest number of people’s plans in motion.
+
+Gia Santos
+Before: Available crew
+After: Creative workshop · Studio A · 10:00–11:00
+Restored coverage while keeping the smallest number of people’s plans in motion.
+
+SOURCE TRACE
+manual:unavailable:0 | unavailable | {"volunteerId":"ava","slotIds":["s1","s2","s3"]}
+manual:demand:0 | demand | {"taskId":"workshop-2","required":2}
+manual:locked:0 | locked | {"taskId":"gallery-1","volunteerId":"chloe"}
+
+Input SHA-256: c3ce802f5310b6bda6a7b6fa63cb5535bb259a87e350f29ed3519180e423ca0f
+Output SHA-256: bf6e022ed6251f2a6b46611ac3db9962ff2198d2f2a1f3f254e585a8f6f5e4de

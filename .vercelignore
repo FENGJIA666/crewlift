@@ -1,0 +1,10 @@
+.git
+.env
+.env.*
+evidence
+internal
+submission
+tests
+video
+CHECKPOINT.md
+fixtures/rejected-model-extraction.json

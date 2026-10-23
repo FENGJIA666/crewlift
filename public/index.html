@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#153f42">
+  <meta name="description" content="CrewLift turns event changes into a coordinated volunteer plan and a ready-to-share action pack.">
+  <title>CrewLift — Every change, a way forward.</title>
+  <link rel="icon" href="/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to workspace</a>
+  <aside class="rail" aria-label="Application navigation">
+    <a class="brand" href="/" aria-label="CrewLift home"><img src="/mark.svg" alt="" width="34" height="34"><span>CrewLift<span class="brand-dot">.</span></span></a>
+    <div class="rail-caption">EVENT WORKSPACE</div>
+    <nav>
+      <a class="nav-link active" href="#main" aria-current="page"><span class="nav-icon">▦</span> Recovery desk</a>
+      <a class="nav-link" href="#roster"><span class="nav-icon">◷</span> Crew schedule</a>
+      <a class="nav-link" href="#action-pack"><span class="nav-icon">↗</span> Action pack</a>
+    </nav>
+    <section class="rail-event" aria-labelledby="event-label">
+      <div class="event-monogram">C<span>↗</span></div>
+      <div class="rail-caption" id="event-label">YOUR EVENT</div>
+      <strong id="event-name">Community in motion</strong>
+      <p>Good people.<br>Great coordination.</p>
+      <div class="event-divider"></div>
+      <div class="tiny-label"><span class="status-dot"></span><span id="crew-count">Loading crew</span></div>
+    </section>
+    <div class="rail-bottom"><span class="mini-avatar">CL</span><div><strong>Event coordinator</strong><span>Make every hand count</span></div></div>
+  </aside>
+  <div class="shell">
+    <header class="topbar"><div class="breadcrumb">Workspace <span>/</span> <strong>Recovery desk</strong></div><div class="topbar-actions"><span class="mode-badge" id="mode-badge"><span></span>Sample scenario</span><button class="text-button" id="connect-button">Connect Nebius <span aria-hidden="true">↗</span></button></div></header>
+    <main id="main" tabindex="-1">
+      <div class="intro"><div><div class="eyebrow">A NEW PLAN. THE SAME TEAM SPIRIT.</div><h1>Every change,<br class="mobile-break"> a way forward<span>.</span></h1><p>Turn a last-minute update into a crew ready for what’s next.</p></div><button class="button secondary reset-button" id="reset-button"><span aria-hidden="true">↻</span> Reset scenario</button></div>
+      <div id="error-banner" class="error-banner" role="alert" hidden></div>
+      <div class="workspace-grid">
+        <section class="panel change-panel" aria-labelledby="change-heading">
+          <div class="section-heading"><div><span class="step-number">01</span><h2 id="change-heading">Capture the change</h2></div><span class="micro-label" id="brief-mode-label">SAMPLE BRIEF</span></div>
+          <label class="sr-only" id="change-brief-label" for="change-brief">Sample change brief</label><textarea id="change-brief" rows="3" placeholder="Loading the event brief…" aria-describedby="brief-help" readonly></textarea>
+          <div class="brief-footer"><span id="brief-help">Your update, ready to become a plan.</span><button class="text-button ai-button" id="extract-button"><span aria-hidden="true">✧</span> Use Nemotron</button></div>
+          <div class="constraints-heading"><h3>Planning rules</h3><button class="text-button small" id="edit-constraints-button" aria-expanded="false" aria-controls="constraints-editor">Edit rules <span aria-hidden="true">↗</span></button></div>
+          <div class="rule-chips" id="rule-chips" aria-live="polite"></div>
+          <div id="review-questions" class="review-questions" hidden></div>
+          <details class="rule-sources"><summary>See where the rules came from</summary><div id="rule-provenance"></div></details>
+          <div id="constraints-editor" class="constraints-editor" hidden>
+            <p>Adjust the event rules, then run recovery to create fresh options.</p>
+            <div class="field-pair"><div><label for="unavailable-person">Availability update</label><select id="unavailable-person"><option value="">Everyone available</option></select></div><div><label for="unavailable-slot">Time window</label><select id="unavailable-slot"><option value="all">All event slots</option></select></div></div>
+            <div class="field-pair"><div><label for="demand-task">Team to resize</label><select id="demand-task"><option value="">Keep original sizes</option></select></div><div><label for="demand-count">People needed</label><input id="demand-count" type="number" min="0" max="30" value="2"></div></div>
+            <details class="advanced-rules"><summary>All rules · JSON</summary><label class="sr-only" for="rules-json">Planning rules as JSON</label><textarea id="rules-json" rows="7" spellcheck="false"></textarea><button class="text-button small" id="apply-json">Apply JSON rules</button></details>
+          </div>
+          <div class="scenario-row"><label for="scenario-preset">Try a change</label><select id="scenario-preset"><option value="default">Original change brief</option></select></div>
+          <button class="button primary run-button" id="run-button"><span>Build recovery plans</span><span aria-hidden="true">↗</span></button>
+          <div class="engine-caption" id="engine-caption"><span class="status-dot"></span> Constraint solver · sample event</div>
+        </section>
+        <section class="outcome-panel" aria-labelledby="outcome-heading" aria-busy="true">
+          <div class="outcome-top"><div class="eyebrow light">YOUR NEXT MOVE, MADE CLEAR</div><span class="outline-badge" id="result-badge">Preparing plans</span></div>
+          <h2 id="outcome-heading">Bring your crew<br>back into flow.</h2>
+          <p class="outcome-copy" id="outcome-copy">Two thoughtful options. One coordinated team.</p>
+          <div class="metric-row"><div class="primary-metric"><span id="coverage-value">—</span><span class="metric-label">of crew needs covered</span></div><div class="metric-note" id="coverage-note">Your plan will appear here.</div></div>
+          <div class="support-metrics"><div><strong id="retained-value">—</strong><span>assignments kept</span></div><div><strong id="changes-value">—</strong><span>people to update</span></div><div><strong id="conflicts-value">—</strong><span>schedule conflicts</span></div></div>
+          <div class="outcome-footer"><span class="check-circle">✓</span><span id="outcome-footer-text">Skills, availability &amp; capacity checked together</span><span class="abstract-arrow" aria-hidden="true">↗</span></div>
+        </section>
+      </div>
+      <section class="options-section" aria-labelledby="options-heading"><div class="section-heading"><div><span class="step-number">02</span><h2 id="options-heading">Choose your plan</h2></div><span class="micro-label">TWO WAYS FORWARD</span></div><div class="plan-options" id="plan-options" role="group" aria-label="Recovery plan options"><div class="loading-state">Building your recovery options…</div></div><div class="accept-row"><div><strong id="revision-label">Choose a plan to move forward</strong><p id="accept-caption">Set this plan as the starting point for your next change.</p></div><button class="button primary" id="accept-button" disabled>Use this plan <span aria-hidden="true">→</span></button></div></section>
+      <section class="panel roster-panel" id="roster" aria-labelledby="roster-heading">
+        <div class="section-heading"><div><span class="step-number">03</span><div><h2 id="roster-heading">The crew, connected</h2><p class="section-description" id="roster-description">A clear place and time for every contribution.</p></div></div><div class="segmented" role="group" aria-label="Schedule view"><button id="view-after" class="selected" aria-pressed="true">Recovery plan</button><button id="view-before" aria-pressed="false">Starting plan</button></div></div>
+        <div class="schedule-scroll" tabindex="0" role="region" aria-label="Crew schedule"><div id="schedule" class="schedule"><div class="loading-state">Loading the crew schedule…</div></div></div>
+        <div class="roster-footer"><div class="schedule-legend"><span><i class="legend-swatch"></i> Assignment kept</span><span><i class="legend-swatch new"></i> New contribution</span></div><button class="text-button small" id="crew-toggle" aria-expanded="false" aria-controls="crew-directory">Meet the crew <span aria-hidden="true">↓</span></button></div>
+        <div id="crew-directory" class="crew-directory" hidden></div>
+        <div class="crew-updates"><h3>Personal updates, ready to share</h3><div class="person-deltas" id="person-deltas"></div></div>
+      </section>
+      <section class="action-pack" id="action-pack" aria-labelledby="action-heading"><div class="action-icon" aria-hidden="true">↗</div><div class="action-copy"><div class="eyebrow">FROM PLAN TO PEOPLE</div><h2 id="action-heading">Ready to rally your crew.</h2><p>Take the updated roster and a personal action brief into your next huddle.</p></div><div class="export-actions"><button class="button primary" data-export="brief">Download action brief <span aria-hidden="true">↓</span></button><div><button class="text-button small" data-export="csv">Roster CSV</button><span>·</span><button class="text-button small" data-export="json">Plan JSON</button><span>·</span><button class="text-button small" id="evidence-button">Run details</button></div></div></section>
+      <footer class="page-footer"><span>CrewLift <span class="footer-dot">•</span> Great events move together.</span><span id="run-status" role="status">Connecting to your workspace…</span></footer>
+    </main>
+  </div>
+  <dialog id="connect-dialog" aria-labelledby="connect-title"><div class="dialog-top"><span class="eyebrow">NVIDIA × NEBIUS</span><button class="icon-button" data-close-dialog aria-label="Close connection information">×</button></div><div class="dialog-mark">✧</div><h2 id="connect-title">Give your brief<br>a running start.</h2><p>Connect Nebius Token Factory to turn a natural-language update into structured planning rules with NVIDIA Nemotron.</p><ol class="connection-steps"><li>Create your Nebius Token Factory account and activate your available credits.</li><li>Create an API key in your account.</li><li>Add <code>NEBIUS_API_KEY</code> to the project’s local <code>.env</code> file, then restart CrewLift.</li></ol><div class="connection-note">Keep your key in your local environment. CrewLift sends the event brief and scenario to the configured model when you choose <strong>Use Nemotron</strong>.</div><button class="button primary" data-close-dialog>Continue with planning rules <span aria-hidden="true">→</span></button></dialog>
+  <dialog id="evidence-dialog" aria-labelledby="evidence-title"><div class="dialog-top"><span class="eyebrow">A CLEAR RECORD OF EVERY RUN</span><button class="icon-button" data-close-dialog aria-label="Close run details">×</button></div><h2 id="evidence-title">Plan provenance</h2><div id="evidence-content"></div><button class="button primary" data-close-dialog>Back to your crew</button></dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>

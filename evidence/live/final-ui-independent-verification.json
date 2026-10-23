@@ -1,0 +1,122 @@
+{
+  "verifiedAt": "2026-10-23T16:52:22.307Z",
+  "scope": "Independent read-only retrieval and validation of three exports from the observed accepted browser run; zero inference, accept or reset requests",
+  "runId": "19643ce5-d744-4136-9b56-f9f4e4704da5",
+  "planId": "minimal-change",
+  "acceptedRevision": {
+    "id": "8d18d21c-beb8-436d-87cc-152570264d46",
+    "number": 1,
+    "acceptedAt": "2026-10-23T16:51:34.694Z",
+    "runId": "19643ce5-d744-4136-9b56-f9f4e4704da5",
+    "planId": "minimal-change"
+  },
+  "modelIdentity": {
+    "requested": "nvidia/Nemotron-3_5-Lightning",
+    "returned": "nvidia/Nemotron-3_5-Lightning",
+    "displayed": "nvidia/Nemotron-3_5-Lightning"
+  },
+  "usage": {
+    "prompt_tokens": 1081,
+    "completion_tokens": 210,
+    "total_tokens": 1291
+  },
+  "inferenceDurationMs": 2667,
+  "sourceClauses": 3,
+  "metrics": {
+    "coveragePct": 100,
+    "coveredSeats": 10,
+    "requiredSeats": 10,
+    "conflicts": 0,
+    "changedPeople": 3,
+    "retainedAssignments": 7,
+    "changedAssignments": 5,
+    "maxLoad": 3,
+    "minLoad": 0,
+    "workloadSpread": 3,
+    "loadSquaredSum": 24,
+    "hoursTotal": 10
+  },
+  "independentAudit": {
+    "valid": true,
+    "covered": 10,
+    "required": 10,
+    "changedPeople": 3,
+    "assignmentChanges": 5,
+    "enumeratedCandidateRosters": 124740
+  },
+  "exports": {
+    "json": {
+      "file": "final-ui-accepted-r1-plan.json",
+      "bytes": 15960,
+      "sha256": "2e24cb9f7bfc59e862d2e2413d0dc08c5b5f3c0c862d6404b8fd5501a3f024fd",
+      "contentType": "application/json; charset=utf-8",
+      "contentDisposition": "attachment; filename=\"crewlift-minimal-change-r1.json\""
+    },
+    "csv": {
+      "file": "final-ui-accepted-r1-plan.csv",
+      "bytes": 1660,
+      "sha256": "912ab60504d393781894cbf6b9e014fa40b2a142cd692d9ec6c0c61eb1e2a594",
+      "contentType": "text/csv; charset=utf-8",
+      "contentDisposition": "attachment; filename=\"crewlift-minimal-change-r1.csv\""
+    },
+    "brief": {
+      "file": "final-ui-accepted-r1-handoff.txt",
+      "bytes": 1457,
+      "sha256": "6b85808b57e8ae393516ffca8d380106f8bd940d90b85757de4947de325372f0",
+      "contentType": "text/plain; charset=utf-8",
+      "contentDisposition": "attachment; filename=\"crewlift-minimal-change-r1.txt\""
+    },
+    "balancedJSON": {
+      "file": "final-ui-balanced-plan.json",
+      "bytes": 19190,
+      "sha256": "e2c7a57f2a050a7b57eacbf078ff5c9f26e02c11c65d366750ff8b325fa04472",
+      "contentType": "application/json; charset=utf-8",
+      "contentDisposition": "attachment; filename=\"crewlift-balanced-draft.json\""
+    }
+  },
+  "privacy": {
+    "checkedFiles": 4,
+    "suspiciousPatternsFound": 0,
+    "scope": "Pattern checks on fictional export content, not a universal secret-detection guarantee",
+    "visuallyInspectedScreens": [
+      "screens/01-written-brief.png",
+      "screens/03-live-sources.png",
+      "screens/05-accepted-revision.png",
+      "screens/06-live-provenance.png"
+    ],
+    "visualFinding": "Fictional CrewLift event data, source clauses, provider model, run IDs and hashes visible; no key, private email, address, payment-card or billing data observed in the inspected screens."
+  },
+  "sourceHashes": {
+    "server.mjs": "a1c30221228c642c0e91f7ab81477ccd385a2eb58eebf4b84f7c3e0722c280b8",
+    "lib/nebius.mjs": "4ef5cecf6d2dd4b17f63a02def0a1c217268e00a04e68942adbf8b8c426c9c4c",
+    "lib/solver.mjs": "2986d30fd533b6d94c37c60b3e64e92e95eaf8bc35cb67e7afed4b0d7a51d1a7",
+    "lib/export.mjs": "9a7a9941a7e3d4b62ce87aea22e596218cbc7d277825baf3d080a0039f36c6cf",
+    "fixtures/scenario.json": "a07d9f9bcdcf973189cd603f61b989e1202e014bbf42e0682a33f430ebb88029",
+    "public/app.js": "1591467708f48afc15bf5f5fab9367ebba89ebb3306d6ce46f4f542d23a2cba0",
+    "scripts/verify-ui-exports.mjs": "38bf23c5682a6eb72690df45671525de95cf86804eeff263b3b176fd4d294268"
+  },
+  "alternativePlan": {
+    "planId": "balanced",
+    "sameRun": true,
+    "accepted": false,
+    "coverage": "10/10",
+    "changedPeople": 7,
+    "assignmentChanges": 9,
+    "squaredWorkload": 16,
+    "independentAuditPassed": true,
+    "objectiveComparedWith": "solver-verification.json#demo-default (124740 candidate rosters)"
+  },
+  "observedUIHashesMatched": {
+    "inputHash": "2553983fcee971928de72821268d9693e2a652710ac0aa01a2631aeff73a27ee",
+    "outputHash": "bf6e022ed6251f2a6b46611ac3db9962ff2198d2f2a1f3f254e585a8f6f5e4de"
+  },
+  "updatedAt": "2026-10-23T16:53:04.751Z",
+  "browserDownloadedBrief": {
+    "file": "browser-downloaded-brief.txt",
+    "bytes": 1457,
+    "sha256": "6b85808b57e8ae393516ffca8d380106f8bd940d90b85757de4947de325372f0",
+    "byteIdenticalToAPIExport": true,
+    "downloadInteractionEvidence": "Lead Manager observed actual UI download event and copied its returned local file. Evidence Supervisor independently compared the resulting bytes."
+  },
+  "computeDurationMs": 2686
+}

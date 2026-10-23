@@ -1,0 +1,19 @@
+{
+  "createdAt": "2026-10-23T18:03:46.407Z",
+  "success": true,
+  "scope": "Real durable Redis; isolated disposable verification namespace; no model inference.",
+  "checks": [
+    "Six parallel reservations across two Redis clients admitted exactly two; reinitialization preserved the exhausted ledger.",
+    "Session state persisted between workers; separate sessions remained isolated; simultaneous same-session mutation was rejected.",
+    "A superseded lease could neither save its stale state nor delete the newer worker lock.",
+    "A missing ledger disabled requests; the 30-second interval and five-call session allowance rejected requests without consuming more global quota."
+  ],
+  "cleanedUp": true,
+  "sourceHashes": {
+    "lib/session-store.mjs": "2da8dcf803a6c8aea4e7b7633809cda3ebb9aef81832a8a589454fc601c6be8a",
+    "lib/public-session.mjs": "1518fe3d64eca5c1f4be0fad5528a1032a9cfeacf77dcecb4924150f4797d6a7",
+    "lib/live-budget.mjs": "205669742ef106eb4ce5ce8aea9ccab2656b9235ed1454954a786fb23b901526",
+    "server.mjs": "b6dd2dcc867d02673436c7a4a99276f84bdcf64de1fbb1e2f058811b516bca73",
+    "api/index.mjs": "5f5d8d7b58068f870a145237e8b4cebe46f36d7da8c37cc9d6f3cb80e08fdcc6"
+  }
+}

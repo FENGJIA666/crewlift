@@ -1,0 +1,264 @@
+{
+  "brief": "Ava cannot attend any of the three shifts. The creative workshop in Studio A needs two facilitators from 10:00 to 11:00. Keep Chloe on the 09:00 gallery tour.",
+  "extraction": {
+    "parsedType": "object",
+    "constraints": {
+      "unavailable": [
+        {
+          "volunteerId": "ava",
+          "slotIds": [
+            "s1",
+            "s2",
+            "s3"
+          ]
+        }
+      ],
+      "demand": [
+        {
+          "taskId": "workshop-1",
+          "required": 2
+        },
+        {
+          "taskId": "workshop-2",
+          "required": 1
+        },
+        {
+          "taskId": "workshop-3",
+          "required": 1
+        }
+      ],
+      "locked": [
+        {
+          "taskId": "gallery-1",
+          "volunteerId": "chloe"
+        },
+        {
+          "taskId": "gallery-2",
+          "volunteerId": "chloe"
+        },
+        {
+          "taskId": "gallery-3",
+          "volunteerId": "chloe"
+        }
+      ],
+      "skillRequirements": [
+        {
+          "taskId": "welcome-1",
+          "skills": [
+            "welcome"
+          ]
+        },
+        {
+          "taskId": "welcome-2",
+          "skills": [
+            "welcome"
+          ]
+        },
+        {
+          "taskId": "welcome-3",
+          "skills": [
+            "welcome"
+          ]
+        },
+        {
+          "taskId": "workshop-1",
+          "skills": [
+            "facilitation"
+          ]
+        },
+        {
+          "taskId": "workshop-2",
+          "skills": [
+            "facilitation"
+          ]
+        },
+        {
+          "taskId": "workshop-3",
+          "skills": [
+            "facilitation"
+          ]
+        },
+        {
+          "taskId": "gallery-1",
+          "skills": [
+            "guide"
+          ]
+        },
+        {
+          "taskId": "gallery-2",
+          "skills": [
+            "guide"
+          ]
+        },
+        {
+          "taskId": "gallery-3",
+          "skills": [
+            "guide"
+          ]
+        }
+      ],
+      "capacity": [
+        {
+          "volunteerId": "ava",
+          "maxAssignments": 0
+        },
+        {
+          "volunteerId": "ben",
+          "maxAssignments": 3
+        },
+        {
+          "volunteerId": "chloe",
+          "maxAssignments": 3
+        },
+        {
+          "volunteerId": "dev",
+          "maxAssignments": 3
+        },
+        {
+          "volunteerId": "emi",
+          "maxAssignments": 3
+        },
+        {
+          "volunteerId": "finn",
+          "maxAssignments": 2
+        },
+        {
+          "volunteerId": "gia",
+          "maxAssignments": 3
+        },
+        {
+          "volunteerId": "hugo",
+          "maxAssignments": 2
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "kind": "unavailable",
+        "constraintIndex": 0,
+        "quote": "Ava cannot attend any of the three shifts."
+      },
+      {
+        "kind": "demand",
+        "constraintIndex": 0,
+        "quote": "The creative workshop in Studio A needs two facilitators from 10:00 to 11:00."
+      },
+      {
+        "kind": "demand",
+        "constraintIndex": 1,
+        "quote": "workshop-2 requires 1 facilitator."
+      },
+      {
+        "kind": "demand",
+        "constraintIndex": 2,
+        "quote": "workshop-3 requires 1 facilitator."
+      },
+      {
+        "kind": "locked",
+        "constraintIndex": 0,
+        "quote": "Keep Chloe on the 09:00 gallery tour."
+      },
+      {
+        "kind": "locked",
+        "constraintIndex": 1,
+        "quote": "gallery-1 initialAssignees: chloe"
+      },
+      {
+        "kind": "locked",
+        "constraintIndex": 2,
+        "quote": "gallery-2 initialAssignees: chloe"
+      },
+      {
+        "kind": "locked",
+        "constraintIndex": 3,
+        "quote": "gallery-3 initialAssignees: chloe"
+      },
+      {
+        "kind": "skillRequirements",
+        "constraintIndex": 0,
+        "quote": "welcome-1 skills: [\"welcome\"]"
+      },
+      {
+        "kind": "skillRequirements",
+        "constraintIndex": 1,
+        "quote": "welcome-2 skills: [\"welcome\"]"
+      },
+      {
+        "kind": "skillRequirements",
+        "constraintIndex": 2,
+        "quote": "welcome-3 skills: [\"welcome\"]"
+      },
+      {
+        "kind": "skillRequirements",
+        "constraintIndex": 3,
+        "quote": "workshop-1 skills: [\"facilitation\"]"
+      },
+      {
+        "kind": "skillRequirements",
+        "constraintIndex": 4,
+        "quote": "workshop-2 skills: [\"facilitation\"]"
+      },
+      {
+        "kind": "skillRequirements",
+        "constraintIndex": 5,
+        "quote": "workshop-3 skills: [\"facilitation\"]"
+      },
+      {
+        "kind": "skillRequirements",
+        "constraintIndex": 6,
+        "quote": "gallery-1 skills: [\"guide\"]"
+      },
+      {
+        "kind": "skillRequirements",
+        "constraintIndex": 7,
+        "quote": "gallery-2 skills: [\"guide\"]"
+      },
+      {
+        "kind": "skillRequirements",
+        "constraintIndex": 8,
+        "quote": "gallery-3 skills: [\"guide\"]"
+      },
+      {
+        "kind": "capacity",
+        "constraintIndex": 0,
+        "quote": "ava maxAssignments: 3"
+      },
+      {
+        "kind": "capacity",
+        "constraintIndex": 1,
+        "quote": "ben maxAssignments: 3"
+      },
+      {
+        "kind": "capacity",
+        "constraintIndex": 2,
+        "quote": "chloe maxAssignments: 3"
+      },
+      {
+        "kind": "capacity",
+        "constraintIndex": 3,
+        "quote": "dev maxAssignments: 3"
+      },
+      {
+        "kind": "capacity",
+        "constraintIndex": 4,
+        "quote": "emi maxAssignments: 3"
+      },
+      {
+        "kind": "capacity",
+        "constraintIndex": 5,
+        "quote": "finn maxAssignments: 2"
+      },
+      {
+        "kind": "capacity",
+        "constraintIndex": 6,
+        "quote": "gia maxAssignments: 3"
+      },
+      {
+        "kind": "capacity",
+        "constraintIndex": 7,
+        "quote": "hugo maxAssignments: 2"
+      }
+    ],
+    "questions": []
+  }
+}

@@ -1,0 +1,154 @@
+TAP version 13
+# Subtest: API runs, accepts, revises, rejects stale acceptance and exports both revisions
+ok 1 - API runs, accepts, revises, rejects stale acceptance and exports both revisions
+  ---
+  duration_ms: 140.208375
+  type: 'test'
+  ...
+# Subtest: reset creates a fresh baseline and clears prior run authority
+ok 2 - reset creates a fresh baseline and clears prior run authority
+  ---
+  duration_ms: 20.919041
+  type: 'test'
+  ...
+# Subtest: live mode cannot report inference without a key
+ok 3 - live mode cannot report inference without a key
+  ---
+  duration_ms: 3.138542
+  type: 'test'
+  ...
+# Subtest: partial coverage stays reviewable and cannot become an accepted full roster
+ok 4 - partial coverage stays reviewable and cannot become an accepted full roster
+  ---
+  duration_ms: 32.656167
+  type: 'test'
+  ...
+# Subtest: golden sources require the corresponding complete support for absence, demand and lock
+ok 5 - golden sources require the corresponding complete support for absence, demand and lock
+  ---
+  duration_ms: 2.581417
+  type: 'test'
+  ...
+# Subtest: observed-model assertion rejects requested-only and mismatched identities
+ok 6 - observed-model assertion rejects requested-only and mismatched identities
+  ---
+  duration_ms: 0.36675
+  type: 'test'
+  ...
+# Subtest: incomplete, negative and inconsistent token usage yields unknown cost
+ok 7 - incomplete, negative and inconsistent token usage yields unknown cost
+  ---
+  duration_ms: 0.0815
+  type: 'test'
+  ...
+# Subtest: CSV and handoff verification checks actual run, revision, assignments and cards
+ok 8 - CSV and handoff verification checks actual run, revision, assignments and cards
+  ---
+  duration_ms: 49.109875
+  type: 'test'
+  ...
+# Subtest: model extraction requires exact brief evidence and known entity IDs
+ok 9 - model extraction requires exact brief evidence and known entity IDs
+  ---
+  duration_ms: 1.726042
+  type: 'test'
+  ...
+# Subtest: missing API key blocks live mode before network access
+ok 10 - missing API key blocks live mode before network access
+  ---
+  duration_ms: 0.318833
+  type: 'test'
+  ...
+# Subtest: adapter sends the actual NVIDIA model and returns sanitized response metadata (mock transport)
+ok 11 - adapter sends the actual NVIDIA model and returns sanitized response metadata (mock transport)
+  ---
+  duration_ms: 21.396458
+  type: 'test'
+  ...
+# Subtest: live context contains original event data without sample constraint answers
+ok 12 - live context contains original event data without sample constraint answers
+  ---
+  duration_ms: 0.586833
+  type: 'test'
+  ...
+# Subtest: observed model output that invents baseline source quotations is rejected unchanged
+ok 13 - observed model output that invents baseline source quotations is rejected unchanged
+  ---
+  duration_ms: 8.475541
+  type: 'test'
+  ...
+# Subtest: empty or incomplete output preserves only safe provider diagnostics for a bounded retry
+ok 14 - empty or incomplete output preserves only safe provider diagnostics for a bounded retry
+  ---
+  duration_ms: 0.84925
+  type: 'test'
+  ...
+# Subtest: missing and different provider model identities cannot produce a verified live result
+ok 15 - missing and different provider model identities cannot produce a verified live result
+  ---
+  duration_ms: 0.893917
+  type: 'test'
+  ...
+# Subtest: source validation failures retain only whitelisted parsed extraction for diagnosis
+ok 16 - source validation failures retain only whitelisted parsed extraction for diagnosis
+  ---
+  duration_ms: 0.616167
+  type: 'test'
+  ...
+# Subtest: original roster keeps all original tasks without changing a person
+ok 17 - original roster keeps all original tasks without changing a person
+  ---
+  duration_ms: 58.24825
+  type: 'test'
+  ...
+# Subtest: absence and expanded workshop create distinct fully covered outcomes
+ok 18 - absence and expanded workshop create distinct fully covered outcomes
+  ---
+  duration_ms: 28.228625
+  type: 'test'
+  ...
+# Subtest: skill constraint and maximum-shift limit are hard constraints
+ok 19 - skill constraint and maximum-shift limit are hard constraints
+  ---
+  duration_ms: 23.900542
+  type: 'test'
+  ...
+# Subtest: infeasible demand returns legal maximum coverage and explicit missing seats
+ok 20 - infeasible demand returns legal maximum coverage and explicit missing seats
+  ---
+  duration_ms: 30.910959
+  type: 'test'
+  ...
+# Subtest: conflicting preserved assignments are rejected with an actionable code
+ok 21 - conflicting preserved assignments are rejected with an actionable code
+  ---
+  duration_ms: 0.82175
+  type: 'test'
+  ...
+# Subtest: unknown entities, malformed counters and duplicate constraints never reach the solver
+ok 22 - unknown entities, malformed counters and duplicate constraints never reach the solver
+  ---
+  duration_ms: 0.158458
+  type: 'test'
+  ...
+# Subtest: independent assignment audit detects overlap, skill and shift-limit violations
+ok 23 - independent assignment audit detects overlap, skill and shift-limit violations
+  ---
+  duration_ms: 0.311167
+  type: 'test'
+  ...
+# Subtest: new locked assignments do not let subset-size pruning overstate the minimum affected crew
+ok 24 - new locked assignments do not let subset-size pruning overstate the minimum affected crew
+  ---
+  duration_ms: 0.732459
+  type: 'test'
+  ...
+1..24
+# tests 24
+# suites 0
+# pass 24
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 263.031041

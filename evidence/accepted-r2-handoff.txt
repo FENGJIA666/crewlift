@@ -1,0 +1,36 @@
+CrewLift | Makers Morning
+Keep plans steady · Accepted revision 2 · Sample scenario · local constraint solver
+Run: 6cf82ebe-c851-4825-880a-4b6cc42d265e
+Coverage: 10/10 places | Assignment conflicts: 0
+5 original assignments retained | 3 people receive updated plans
+
+10 of 10 required places covered with 0 assignment conflicts.
+5 original assignments retained; 3 people receive an updated plan.
+1 confirmed assignments preserved.
+Exact search finds the smallest affected crew for this scenario.
+
+PERSONAL HANDOFF CARDS
+
+Ben Morris
+Before: Creative workshop · Studio A · 09:00–10:00; Creative workshop · Studio A · 10:00–11:00; Creative workshop · Studio A · 11:00–12:00
+After: No assigned shift
+Updated availability respected.
+
+Emi Park
+Before: Welcome desk · Atrium · 09:00–10:00; Welcome desk · Atrium · 10:00–11:00
+After: Creative workshop · Studio A · 09:00–10:00; Creative workshop · Studio A · 10:00–11:00; Creative workshop · Studio A · 11:00–12:00
+Restored coverage while keeping the smallest number of people’s plans in motion.
+
+Hugo Lin
+Before: Available crew
+After: Welcome desk · Atrium · 09:00–10:00; Welcome desk · Atrium · 10:00–11:00
+Restored coverage while keeping the smallest number of people’s plans in motion.
+
+SOURCE TRACE
+manual:unavailable:0 | unavailable | {"volunteerId":"ava","slotIds":["s1","s2","s3"]}
+manual:unavailable:1 | unavailable | {"volunteerId":"ben","slotIds":["s1","s2","s3"]}
+manual:demand:0 | demand | {"taskId":"workshop-2","required":2}
+manual:locked:0 | locked | {"taskId":"gallery-1","volunteerId":"chloe"}
+
+Input SHA-256: 647510732a75291c6ca5fa6bc2adbc85980a3deeceaf7ca2e6a72a2c24f40a9a
+Output SHA-256: dff0cd8e77f907a5074ad5ead3013de38c3b7da2aa86477bb9eceab7a530eed9

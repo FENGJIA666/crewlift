@@ -1,0 +1,785 @@
+{
+  "application": "CrewLift",
+  "dataLabel": "Sample scenario — fictional people and event",
+  "schemaVersion": 1,
+  "run": {
+    "id": "6cf82ebe-c851-4825-880a-4b6cc42d265e",
+    "createdAt": "2026-10-23T16:51:14.983Z",
+    "durationMs": 19,
+    "inferenceDurationMs": null,
+    "model": null,
+    "requestedModel": null,
+    "returnedModel": null,
+    "usage": null,
+    "provider": null,
+    "baselineRevision": {
+      "id": "780c4be7-ba86-4ff1-8212-7221682952e4",
+      "number": 1,
+      "acceptedAt": "2026-10-23T16:51:14.924Z",
+      "runId": "7796c620-c92f-4c82-9ccc-a9232a030222",
+      "planId": "minimal-change"
+    },
+    "inputHash": "647510732a75291c6ca5fa6bc2adbc85980a3deeceaf7ca2e6a72a2c24f40a9a",
+    "outputHash": "dff0cd8e77f907a5074ad5ead3013de38c3b7da2aa86477bb9eceab7a530eed9"
+  },
+  "revision": {
+    "id": "6fc15801-c492-41c4-aadb-18173d5e5a6c",
+    "number": 2,
+    "acceptedAt": "2026-10-23T16:51:15.491Z",
+    "runId": "6cf82ebe-c851-4825-880a-4b6cc42d265e",
+    "planId": "minimal-change"
+  },
+  "scenario": {
+    "id": "makers-morning-v1",
+    "title": "Makers Morning",
+    "label": "Sample scenario",
+    "description": "A fictional community creativity event. Eight volunteers. Three rooms. One coordinated recovery.",
+    "date": "2026-10-30",
+    "timezone": "Asia/Singapore",
+    "skills": [
+      "welcome",
+      "facilitation",
+      "guide",
+      "logistics"
+    ],
+    "slots": [
+      {
+        "id": "s1",
+        "label": "09:00–10:00",
+        "start": "09:00",
+        "end": "10:00",
+        "hours": 1
+      },
+      {
+        "id": "s2",
+        "label": "10:00–11:00",
+        "start": "10:00",
+        "end": "11:00",
+        "hours": 1
+      },
+      {
+        "id": "s3",
+        "label": "11:00–12:00",
+        "start": "11:00",
+        "end": "12:00",
+        "hours": 1
+      }
+    ],
+    "volunteers": [
+      {
+        "id": "ava",
+        "name": "Ava Chen",
+        "skills": [
+          "welcome",
+          "logistics"
+        ],
+        "maxAssignments": 3,
+        "availability": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      {
+        "id": "ben",
+        "name": "Ben Morris",
+        "skills": [
+          "facilitation",
+          "logistics"
+        ],
+        "maxAssignments": 3,
+        "availability": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      {
+        "id": "chloe",
+        "name": "Chloe Tan",
+        "skills": [
+          "guide",
+          "welcome"
+        ],
+        "maxAssignments": 3,
+        "availability": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      {
+        "id": "dev",
+        "name": "Dev Shah",
+        "skills": [
+          "welcome",
+          "guide"
+        ],
+        "maxAssignments": 3,
+        "availability": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      {
+        "id": "emi",
+        "name": "Emi Park",
+        "skills": [
+          "facilitation",
+          "welcome"
+        ],
+        "maxAssignments": 3,
+        "availability": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      {
+        "id": "finn",
+        "name": "Finn Reed",
+        "skills": [
+          "guide",
+          "logistics"
+        ],
+        "maxAssignments": 2,
+        "availability": [
+          "s2",
+          "s3"
+        ]
+      },
+      {
+        "id": "gia",
+        "name": "Gia Santos",
+        "skills": [
+          "facilitation",
+          "guide"
+        ],
+        "maxAssignments": 3,
+        "availability": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      {
+        "id": "hugo",
+        "name": "Hugo Lin",
+        "skills": [
+          "welcome",
+          "logistics"
+        ],
+        "maxAssignments": 2,
+        "availability": [
+          "s1",
+          "s2"
+        ]
+      }
+    ],
+    "tasks": [
+      {
+        "id": "welcome-1",
+        "title": "Welcome desk",
+        "room": "Atrium",
+        "slotId": "s1",
+        "skills": [
+          "welcome"
+        ],
+        "required": 1,
+        "initialAssignees": [
+          "emi"
+        ]
+      },
+      {
+        "id": "workshop-1",
+        "title": "Creative workshop",
+        "room": "Studio A",
+        "slotId": "s1",
+        "skills": [
+          "facilitation"
+        ],
+        "required": 1,
+        "initialAssignees": [
+          "ben"
+        ]
+      },
+      {
+        "id": "gallery-1",
+        "title": "Gallery tours",
+        "room": "Gallery",
+        "slotId": "s1",
+        "skills": [
+          "guide"
+        ],
+        "required": 1,
+        "initialAssignees": [
+          "chloe"
+        ]
+      },
+      {
+        "id": "welcome-2",
+        "title": "Welcome desk",
+        "room": "Atrium",
+        "slotId": "s2",
+        "skills": [
+          "welcome"
+        ],
+        "required": 1,
+        "initialAssignees": [
+          "emi"
+        ]
+      },
+      {
+        "id": "workshop-2",
+        "title": "Creative workshop",
+        "room": "Studio A",
+        "slotId": "s2",
+        "skills": [
+          "facilitation"
+        ],
+        "required": 1,
+        "initialAssignees": [
+          "ben",
+          "gia"
+        ]
+      },
+      {
+        "id": "gallery-2",
+        "title": "Gallery tours",
+        "room": "Gallery",
+        "slotId": "s2",
+        "skills": [
+          "guide"
+        ],
+        "required": 1,
+        "initialAssignees": [
+          "chloe"
+        ]
+      },
+      {
+        "id": "welcome-3",
+        "title": "Welcome desk",
+        "room": "Atrium",
+        "slotId": "s3",
+        "skills": [
+          "welcome"
+        ],
+        "required": 1,
+        "initialAssignees": [
+          "dev"
+        ]
+      },
+      {
+        "id": "workshop-3",
+        "title": "Creative workshop",
+        "room": "Studio A",
+        "slotId": "s3",
+        "skills": [
+          "facilitation"
+        ],
+        "required": 1,
+        "initialAssignees": [
+          "ben"
+        ]
+      },
+      {
+        "id": "gallery-3",
+        "title": "Gallery tours",
+        "room": "Gallery",
+        "slotId": "s3",
+        "skills": [
+          "guide"
+        ],
+        "required": 1,
+        "initialAssignees": [
+          "chloe"
+        ]
+      }
+    ],
+    "defaultBrief": "Ava cannot attend any of the three shifts. The creative workshop in Studio A needs two facilitators from 10:00 to 11:00. Keep Chloe on the 09:00 gallery tour.",
+    "initialConstraints": {
+      "unavailable": [
+        {
+          "volunteerId": "ava",
+          "slotIds": [
+            "s1",
+            "s2",
+            "s3"
+          ]
+        }
+      ],
+      "demand": [
+        {
+          "taskId": "workshop-2",
+          "required": 2
+        }
+      ],
+      "locked": [
+        {
+          "taskId": "gallery-1",
+          "volunteerId": "chloe"
+        }
+      ],
+      "skillRequirements": [],
+      "capacity": []
+    },
+    "presets": [
+      {
+        "id": "original",
+        "label": "Original roster",
+        "brief": "Use the original staffing requirements and availability.",
+        "constraints": {
+          "unavailable": [],
+          "demand": [],
+          "locked": [],
+          "skillRequirements": [],
+          "capacity": []
+        }
+      },
+      {
+        "id": "absence",
+        "label": "Ava is away",
+        "brief": "Ava cannot attend any shift. Keep Chloe on the 09:00 gallery tour.",
+        "constraints": {
+          "unavailable": [
+            {
+              "volunteerId": "ava",
+              "slotIds": [
+                "s1",
+                "s2",
+                "s3"
+              ]
+            }
+          ],
+          "demand": [],
+          "locked": [
+            {
+              "taskId": "gallery-1",
+              "volunteerId": "chloe"
+            }
+          ],
+          "skillRequirements": [],
+          "capacity": []
+        }
+      },
+      {
+        "id": "recovery",
+        "label": "Absence + bigger workshop",
+        "brief": "Ava cannot attend any shift. Studio A needs two facilitators from 10:00 to 11:00. Keep Chloe on the 09:00 gallery tour.",
+        "constraints": {
+          "unavailable": [
+            {
+              "volunteerId": "ava",
+              "slotIds": [
+                "s1",
+                "s2",
+                "s3"
+              ]
+            }
+          ],
+          "demand": [
+            {
+              "taskId": "workshop-2",
+              "required": 2
+            }
+          ],
+          "locked": [
+            {
+              "taskId": "gallery-1",
+              "volunteerId": "chloe"
+            }
+          ],
+          "skillRequirements": [],
+          "capacity": []
+        }
+      }
+    ],
+    "revision": {
+      "id": "780c4be7-ba86-4ff1-8212-7221682952e4",
+      "number": 1,
+      "acceptedAt": "2026-10-23T16:51:14.924Z",
+      "runId": "7796c620-c92f-4c82-9ccc-a9232a030222",
+      "planId": "minimal-change"
+    }
+  },
+  "constraints": {
+    "unavailable": [
+      {
+        "volunteerId": "ava",
+        "slotIds": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      {
+        "volunteerId": "ben",
+        "slotIds": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      }
+    ],
+    "demand": [
+      {
+        "taskId": "workshop-2",
+        "required": 2
+      }
+    ],
+    "locked": [
+      {
+        "taskId": "gallery-1",
+        "volunteerId": "chloe"
+      }
+    ],
+    "skillRequirements": [],
+    "capacity": []
+  },
+  "provenance": [
+    {
+      "sourceId": "manual:unavailable:0",
+      "kind": "unavailable",
+      "constraintIndex": 0,
+      "quote": null,
+      "value": {
+        "volunteerId": "ava",
+        "slotIds": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "status": "confirmed",
+      "origin": "Structured controls"
+    },
+    {
+      "sourceId": "manual:unavailable:1",
+      "kind": "unavailable",
+      "constraintIndex": 1,
+      "quote": null,
+      "value": {
+        "volunteerId": "ben",
+        "slotIds": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "status": "confirmed",
+      "origin": "Structured controls"
+    },
+    {
+      "sourceId": "manual:demand:0",
+      "kind": "demand",
+      "constraintIndex": 0,
+      "quote": null,
+      "value": {
+        "taskId": "workshop-2",
+        "required": 2
+      },
+      "status": "confirmed",
+      "origin": "Structured controls"
+    },
+    {
+      "sourceId": "manual:locked:0",
+      "kind": "locked",
+      "constraintIndex": 0,
+      "quote": null,
+      "value": {
+        "taskId": "gallery-1",
+        "volunteerId": "chloe"
+      },
+      "status": "confirmed",
+      "origin": "Structured controls"
+    }
+  ],
+  "questions": [],
+  "plan": {
+    "id": "minimal-change",
+    "title": "Keep plans steady",
+    "objective": "Maximum coverage, then fewest changed people, then retained assignments.",
+    "assignments": [
+      {
+        "taskId": "welcome-1",
+        "volunteerIds": [
+          "hugo"
+        ]
+      },
+      {
+        "taskId": "workshop-1",
+        "volunteerIds": [
+          "emi"
+        ]
+      },
+      {
+        "taskId": "gallery-1",
+        "volunteerIds": [
+          "chloe"
+        ]
+      },
+      {
+        "taskId": "welcome-2",
+        "volunteerIds": [
+          "hugo"
+        ]
+      },
+      {
+        "taskId": "workshop-2",
+        "volunteerIds": [
+          "emi",
+          "gia"
+        ]
+      },
+      {
+        "taskId": "gallery-2",
+        "volunteerIds": [
+          "chloe"
+        ]
+      },
+      {
+        "taskId": "welcome-3",
+        "volunteerIds": [
+          "dev"
+        ]
+      },
+      {
+        "taskId": "workshop-3",
+        "volunteerIds": [
+          "emi"
+        ]
+      },
+      {
+        "taskId": "gallery-3",
+        "volunteerIds": [
+          "chloe"
+        ]
+      }
+    ],
+    "metrics": {
+      "coveragePct": 100,
+      "coveredSeats": 10,
+      "requiredSeats": 10,
+      "conflicts": 0,
+      "changedPeople": 3,
+      "retainedAssignments": 5,
+      "changedAssignments": 10,
+      "maxLoad": 3,
+      "minLoad": 0,
+      "workloadSpread": 3,
+      "loadSquaredSum": 24,
+      "hoursTotal": 10
+    },
+    "workloads": [
+      {
+        "volunteerId": "ava",
+        "assignments": 0,
+        "hours": 0,
+        "maxAssignments": 3,
+        "available": false
+      },
+      {
+        "volunteerId": "ben",
+        "assignments": 0,
+        "hours": 0,
+        "maxAssignments": 3,
+        "available": false
+      },
+      {
+        "volunteerId": "chloe",
+        "assignments": 3,
+        "hours": 3,
+        "maxAssignments": 3,
+        "available": true
+      },
+      {
+        "volunteerId": "dev",
+        "assignments": 1,
+        "hours": 1,
+        "maxAssignments": 3,
+        "available": true
+      },
+      {
+        "volunteerId": "emi",
+        "assignments": 3,
+        "hours": 3,
+        "maxAssignments": 3,
+        "available": true
+      },
+      {
+        "volunteerId": "finn",
+        "assignments": 0,
+        "hours": 0,
+        "maxAssignments": 2,
+        "available": true
+      },
+      {
+        "volunteerId": "gia",
+        "assignments": 1,
+        "hours": 1,
+        "maxAssignments": 3,
+        "available": true
+      },
+      {
+        "volunteerId": "hugo",
+        "assignments": 2,
+        "hours": 2,
+        "maxAssignments": 2,
+        "available": true
+      }
+    ],
+    "changes": [
+      {
+        "taskId": "welcome-1",
+        "added": [
+          "hugo"
+        ],
+        "removed": [
+          "emi"
+        ]
+      },
+      {
+        "taskId": "workshop-1",
+        "added": [
+          "emi"
+        ],
+        "removed": [
+          "ben"
+        ]
+      },
+      {
+        "taskId": "welcome-2",
+        "added": [
+          "hugo"
+        ],
+        "removed": [
+          "emi"
+        ]
+      },
+      {
+        "taskId": "workshop-2",
+        "added": [
+          "emi"
+        ],
+        "removed": [
+          "ben"
+        ]
+      },
+      {
+        "taskId": "workshop-3",
+        "added": [
+          "emi"
+        ],
+        "removed": [
+          "ben"
+        ]
+      }
+    ],
+    "changeCards": [
+      {
+        "volunteerId": "ben",
+        "name": "Ben Morris",
+        "before": [
+          {
+            "taskId": "workshop-1",
+            "title": "Creative workshop",
+            "room": "Studio A",
+            "slotId": "s1",
+            "time": "09:00–10:00"
+          },
+          {
+            "taskId": "workshop-2",
+            "title": "Creative workshop",
+            "room": "Studio A",
+            "slotId": "s2",
+            "time": "10:00–11:00"
+          },
+          {
+            "taskId": "workshop-3",
+            "title": "Creative workshop",
+            "room": "Studio A",
+            "slotId": "s3",
+            "time": "11:00–12:00"
+          }
+        ],
+        "after": [],
+        "reason": "Updated availability respected."
+      },
+      {
+        "volunteerId": "emi",
+        "name": "Emi Park",
+        "before": [
+          {
+            "taskId": "welcome-1",
+            "title": "Welcome desk",
+            "room": "Atrium",
+            "slotId": "s1",
+            "time": "09:00–10:00"
+          },
+          {
+            "taskId": "welcome-2",
+            "title": "Welcome desk",
+            "room": "Atrium",
+            "slotId": "s2",
+            "time": "10:00–11:00"
+          }
+        ],
+        "after": [
+          {
+            "taskId": "workshop-1",
+            "title": "Creative workshop",
+            "room": "Studio A",
+            "slotId": "s1",
+            "time": "09:00–10:00"
+          },
+          {
+            "taskId": "workshop-2",
+            "title": "Creative workshop",
+            "room": "Studio A",
+            "slotId": "s2",
+            "time": "10:00–11:00"
+          },
+          {
+            "taskId": "workshop-3",
+            "title": "Creative workshop",
+            "room": "Studio A",
+            "slotId": "s3",
+            "time": "11:00–12:00"
+          }
+        ],
+        "reason": "Restored coverage while keeping the smallest number of people’s plans in motion."
+      },
+      {
+        "volunteerId": "hugo",
+        "name": "Hugo Lin",
+        "before": [],
+        "after": [
+          {
+            "taskId": "welcome-1",
+            "title": "Welcome desk",
+            "room": "Atrium",
+            "slotId": "s1",
+            "time": "09:00–10:00"
+          },
+          {
+            "taskId": "welcome-2",
+            "title": "Welcome desk",
+            "room": "Atrium",
+            "slotId": "s2",
+            "time": "10:00–11:00"
+          }
+        ],
+        "reason": "Restored coverage while keeping the smallest number of people’s plans in motion."
+      }
+    ],
+    "uncovered": [],
+    "explanation": [
+      "10 of 10 required places covered with 0 assignment conflicts.",
+      "5 original assignments retained; 3 people receive an updated plan.",
+      "1 confirmed assignments preserved.",
+      "Exact search finds the smallest affected crew for this scenario."
+    ],
+    "violations": []
+  }
+}

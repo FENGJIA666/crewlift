@@ -1,0 +1,42 @@
+{
+  "id": "makers-morning-v1",
+  "title": "Makers Morning",
+  "label": "Sample scenario",
+  "description": "A fictional community creativity event. Eight volunteers. Three rooms. One coordinated recovery.",
+  "date": "2026-10-30",
+  "timezone": "Asia/Singapore",
+  "skills": ["welcome", "facilitation", "guide", "logistics"],
+  "slots": [
+    {"id":"s1","label":"09:00–10:00","start":"09:00","end":"10:00","hours":1},
+    {"id":"s2","label":"10:00–11:00","start":"10:00","end":"11:00","hours":1},
+    {"id":"s3","label":"11:00–12:00","start":"11:00","end":"12:00","hours":1}
+  ],
+  "volunteers": [
+    {"id":"ava","name":"Ava Chen","skills":["welcome","logistics"],"maxAssignments":3,"availability":["s1","s2","s3"]},
+    {"id":"ben","name":"Ben Morris","skills":["facilitation","logistics"],"maxAssignments":3,"availability":["s1","s2","s3"]},
+    {"id":"chloe","name":"Chloe Tan","skills":["guide","welcome"],"maxAssignments":3,"availability":["s1","s2","s3"]},
+    {"id":"dev","name":"Dev Shah","skills":["welcome","guide"],"maxAssignments":3,"availability":["s1","s2","s3"]},
+    {"id":"emi","name":"Emi Park","skills":["facilitation","welcome"],"maxAssignments":3,"availability":["s1","s2","s3"]},
+    {"id":"finn","name":"Finn Reed","skills":["guide","logistics"],"maxAssignments":2,"availability":["s2","s3"]},
+    {"id":"gia","name":"Gia Santos","skills":["facilitation","guide"],"maxAssignments":3,"availability":["s1","s2","s3"]},
+    {"id":"hugo","name":"Hugo Lin","skills":["welcome","logistics"],"maxAssignments":2,"availability":["s1","s2"]}
+  ],
+  "tasks": [
+    {"id":"welcome-1","title":"Welcome desk","room":"Atrium","slotId":"s1","skills":["welcome"],"required":1,"initialAssignees":["ava"]},
+    {"id":"workshop-1","title":"Creative workshop","room":"Studio A","slotId":"s1","skills":["facilitation"],"required":1,"initialAssignees":["ben"]},
+    {"id":"gallery-1","title":"Gallery tours","room":"Gallery","slotId":"s1","skills":["guide"],"required":1,"initialAssignees":["chloe"]},
+    {"id":"welcome-2","title":"Welcome desk","room":"Atrium","slotId":"s2","skills":["welcome"],"required":1,"initialAssignees":["ava"]},
+    {"id":"workshop-2","title":"Creative workshop","room":"Studio A","slotId":"s2","skills":["facilitation"],"required":1,"initialAssignees":["ben"]},
+    {"id":"gallery-2","title":"Gallery tours","room":"Gallery","slotId":"s2","skills":["guide"],"required":1,"initialAssignees":["chloe"]},
+    {"id":"welcome-3","title":"Welcome desk","room":"Atrium","slotId":"s3","skills":["welcome"],"required":1,"initialAssignees":["dev"]},
+    {"id":"workshop-3","title":"Creative workshop","room":"Studio A","slotId":"s3","skills":["facilitation"],"required":1,"initialAssignees":["ben"]},
+    {"id":"gallery-3","title":"Gallery tours","room":"Gallery","slotId":"s3","skills":["guide"],"required":1,"initialAssignees":["chloe"]}
+  ],
+  "defaultBrief": "Ava cannot attend any of the three shifts. The creative workshop in Studio A needs two facilitators from 10:00 to 11:00. Keep Chloe on the 09:00 gallery tour.",
+  "initialConstraints": {"unavailable":[{"volunteerId":"ava","slotIds":["s1","s2","s3"]}],"demand":[{"taskId":"workshop-2","required":2}],"locked":[{"taskId":"gallery-1","volunteerId":"chloe"}],"skillRequirements":[],"capacity":[]},
+  "presets": [
+    {"id":"original","label":"Original roster","brief":"Use the original staffing requirements and availability.","constraints":{"unavailable":[],"demand":[],"locked":[],"skillRequirements":[],"capacity":[]}},
+    {"id":"absence","label":"Ava is away","brief":"Ava cannot attend any shift. Keep Chloe on the 09:00 gallery tour.","constraints":{"unavailable":[{"volunteerId":"ava","slotIds":["s1","s2","s3"]}],"demand":[],"locked":[{"taskId":"gallery-1","volunteerId":"chloe"}],"skillRequirements":[],"capacity":[]}},
+    {"id":"recovery","label":"Absence + bigger workshop","brief":"Ava cannot attend any shift. Studio A needs two facilitators from 10:00 to 11:00. Keep Chloe on the 09:00 gallery tour.","constraints":{"unavailable":[{"volunteerId":"ava","slotIds":["s1","s2","s3"]}],"demand":[{"taskId":"workshop-2","required":2}],"locked":[{"taskId":"gallery-1","volunteerId":"chloe"}],"skillRequirements":[],"capacity":[]}}
+  ]
+}

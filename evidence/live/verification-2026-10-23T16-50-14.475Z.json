@@ -1,0 +1,202 @@
+{
+  "createdAt": "2026-10-23T16:50:14.475Z",
+  "preflight": {
+    "mode": "authorized-live-verification",
+    "apiKeyPresent": true,
+    "requestedModel": "nvidia/Nemotron-3_5-Lightning",
+    "maximumInferenceRequests": 1,
+    "maximumCompletionTokens": 4096,
+    "usesFictionalData": true
+  },
+  "scope": "One actual NVIDIA inference request; isolated local solver, acceptance, and export verification.",
+  "sourceHashes": {
+    "server.mjs": "a1c30221228c642c0e91f7ab81477ccd385a2eb58eebf4b84f7c3e0722c280b8",
+    "lib/nebius.mjs": "4ef5cecf6d2dd4b17f63a02def0a1c217268e00a04e68942adbf8b8c426c9c4c",
+    "lib/constraints.mjs": "e88e7e3b775cb40cbe1fcefa352ab9c2573d4aa7fcb7667f5606354ed77cc08e",
+    "lib/solver.mjs": "2986d30fd533b6d94c37c60b3e64e92e95eaf8bc35cb67e7afed4b0d7a51d1a7",
+    "lib/export.mjs": "9a7a9941a7e3d4b62ce87aea22e596218cbc7d277825baf3d080a0039f36c6cf",
+    "fixtures/scenario.json": "a07d9f9bcdcf973189cd603f61b989e1202e014bbf42e0682a33f430ebb88029",
+    "scripts/verify-live.mjs": "0bc895e593b1f398770f552fa29edcc7c6a41e5811a6a292081b52195c0db469",
+    "scripts/live-assertions.mjs": "1da9dd213da6d69d8338a91bf815eab921d4a25f6c14ed37e09640e324140b49"
+  },
+  "checks": [
+    "Provider-returned model matches requested model; complete token counts, timing, exact constraints and each constraint’s full supporting clause verified.",
+    "Both real solver plans cover 10/10 seats; minimum-change plan changes three people and retains seven assignments.",
+    "Local revision one accepted; JSON matches the selected plan, CSV matches all ten assignment rows and run/revision, and brief matches all three personal before/after cards with locations and times."
+  ],
+  "success": true,
+  "estimatedTokenChargeUSD": 0.00011526,
+  "brief": "Ava cannot attend any of the three shifts. The creative workshop in Studio A needs two facilitators from 10:00 to 11:00. Keep Chloe on the 09:00 gallery tour.",
+  "run": {
+    "id": "d3a93d71-02fc-4e90-9f92-c6372acbba09",
+    "createdAt": "2026-10-23T16:50:16.792Z",
+    "durationMs": 2291,
+    "inferenceDurationMs": 2267,
+    "model": "nvidia/Nemotron-3_5-Lightning",
+    "requestedModel": "nvidia/Nemotron-3_5-Lightning",
+    "returnedModel": "nvidia/Nemotron-3_5-Lightning",
+    "usage": {
+      "prompt_tokens": 1081,
+      "completion_tokens": 210,
+      "total_tokens": 1291
+    },
+    "provider": {
+      "requestedModel": "nvidia/Nemotron-3_5-Lightning",
+      "returnedModel": "nvidia/Nemotron-3_5-Lightning",
+      "finishReason": "stop",
+      "contentType": "string",
+      "contentCharacters": 601,
+      "reasoningCharacters": 0,
+      "reasoningTokens": 0,
+      "usage": {
+        "prompt_tokens": 1081,
+        "completion_tokens": 210,
+        "total_tokens": 1291
+      },
+      "durationMs": 2267,
+      "requestedThinking": false
+    },
+    "baselineRevision": {
+      "id": "baseline-7de16815-2039-45ad-993e-48ffb8bc32f7",
+      "number": 0,
+      "acceptedAt": null,
+      "runId": null,
+      "planId": null
+    },
+    "inputHash": "94cdfa874d6a197d62a2c77b411d3584032d617eb4fa8f4527fb4e2d6bf54caf",
+    "outputHash": "bf6e022ed6251f2a6b46611ac3db9962ff2198d2f2a1f3f254e585a8f6f5e4de"
+  },
+  "constraints": {
+    "unavailable": [
+      {
+        "volunteerId": "ava",
+        "slotIds": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      }
+    ],
+    "demand": [
+      {
+        "taskId": "workshop-2",
+        "required": 2
+      }
+    ],
+    "locked": [
+      {
+        "taskId": "gallery-1",
+        "volunteerId": "chloe"
+      }
+    ],
+    "skillRequirements": [],
+    "capacity": []
+  },
+  "provenance": [
+    {
+      "sourceId": "brief:0",
+      "kind": "unavailable",
+      "constraintIndex": 0,
+      "quote": "Ava cannot attend any of the three shifts.",
+      "value": {
+        "volunteerId": "ava",
+        "slotIds": [
+          "s1",
+          "s2",
+          "s3"
+        ]
+      },
+      "status": "review",
+      "origin": "NVIDIA Nemotron extraction"
+    },
+    {
+      "sourceId": "brief:0",
+      "kind": "demand",
+      "constraintIndex": 0,
+      "quote": "The creative workshop in Studio A needs two facilitators from 10:00 to 11:00.",
+      "value": {
+        "taskId": "workshop-2",
+        "required": 2
+      },
+      "status": "review",
+      "origin": "NVIDIA Nemotron extraction"
+    },
+    {
+      "sourceId": "brief:0",
+      "kind": "locked",
+      "constraintIndex": 0,
+      "quote": "Keep Chloe on the 09:00 gallery tour.",
+      "value": {
+        "taskId": "gallery-1",
+        "volunteerId": "chloe"
+      },
+      "status": "review",
+      "origin": "NVIDIA Nemotron extraction"
+    }
+  ],
+  "questions": [],
+  "planMetrics": [
+    {
+      "id": "minimal-change",
+      "metrics": {
+        "coveragePct": 100,
+        "coveredSeats": 10,
+        "requiredSeats": 10,
+        "conflicts": 0,
+        "changedPeople": 3,
+        "retainedAssignments": 7,
+        "changedAssignments": 5,
+        "maxLoad": 3,
+        "minLoad": 0,
+        "workloadSpread": 3,
+        "loadSquaredSum": 24,
+        "hoursTotal": 10
+      }
+    },
+    {
+      "id": "balanced",
+      "metrics": {
+        "coveragePct": 100,
+        "coveredSeats": 10,
+        "requiredSeats": 10,
+        "conflicts": 0,
+        "changedPeople": 7,
+        "retainedAssignments": 5,
+        "changedAssignments": 9,
+        "maxLoad": 2,
+        "minLoad": 1,
+        "workloadSpread": 1,
+        "loadSquaredSum": 16,
+        "hoursTotal": 10
+      }
+    }
+  ],
+  "acceptedRevision": {
+    "id": "5fcaed7b-e834-497b-8c1b-bcbf6b6d6f38",
+    "number": 1,
+    "acceptedAt": "2026-10-23T16:50:16.795Z",
+    "runId": "d3a93d71-02fc-4e90-9f92-c6372acbba09",
+    "planId": "minimal-change"
+  },
+  "exports": {
+    "json": {
+      "bytes": 15960,
+      "sha256": "8ae2e6865442d852a6f5bfe39619c137ddf164b703f7068e3237908c51d8e6c7"
+    },
+    "csv": {
+      "bytes": 1660,
+      "sha256": "d15ac5589a7ca0175e96f3b8d75cda564ead7ccaf33b3cd3e153843d26d124cb"
+    },
+    "brief": {
+      "bytes": 1457,
+      "sha256": "14522043927615d0a571d4aabb74612485ea8879b7a9535c520b4242e7c4f70a"
+    }
+  },
+  "priceBasis": {
+    "verifiedOn": "2026-10-24",
+    "source": "https://tokenfactory.nebius.com/api/public/models_info",
+    "inputUSDPerMillion": 0.06,
+    "outputUSDPerMillion": 0.24,
+    "note": "Calculated token charge from catalog rates; not a billing-ledger observation."
+  }
+}

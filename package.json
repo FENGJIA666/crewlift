@@ -1,0 +1,10 @@
+{
+  "name": "crewlift",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Evidence-led volunteer roster recovery with NVIDIA Nemotron on Nebius Token Factory.",
+  "scripts": { "start": "node --env-file-if-exists=.env server.mjs", "test": "node --test tests/*.test.mjs" },
+  "engines": { "node": ">=22.0.0" },
+  "license": "MIT"
+}

@@ -1,0 +1,2783 @@
+{
+  "verifiedAt": "2026-10-23T16:51:16.540Z",
+  "scope": "Local deterministic solver; independent brute-force oracle; no live model call",
+  "seed": 23102026,
+  "passed": 95,
+  "failed": 0,
+  "totalEnumeratedCandidates": 128764,
+  "elapsedMs": 1709.77225,
+  "fingerprints": {
+    "lib/solver.mjs": "2986d30fd533b6d94c37c60b3e64e92e95eaf8bc35cb67e7afed4b0d7a51d1a7",
+    "lib/constraints.mjs": "e88e7e3b775cb40cbe1fcefa352ab9c2573d4aa7fcb7667f5606354ed77cc08e",
+    "fixtures/scenario.json": "a07d9f9bcdcf973189cd603f61b989e1202e014bbf42e0682a33f430ebb88029",
+    "scripts/verify-oracle.mjs": "1b31f81cb1a125b4fb15a793af87fed76a52c8e71486a4132e8be9a047c2c04e",
+    "scripts/verify-solver.mjs": "c49b4372b327f4cdc8db0b9543260a3ba1a2fe475487ac3d99024d5382336af6"
+  },
+  "records": [
+    {
+      "name": "small-baseline",
+      "status": "pass",
+      "enumeratedCandidates": 160,
+      "elapsedMs": 7.733833999999998,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 0,
+          "assignmentChanges": 0,
+          "squaredWorkload": 6,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "small-absence-with-demand",
+      "status": "pass",
+      "enumeratedCandidates": 105,
+      "elapsedMs": 2.968667,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 4,
+          "assignmentChanges": 5,
+          "squaredWorkload": 9,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 4,
+          "assignmentChanges": 5,
+          "squaredWorkload": 9,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "small-skills-and-capacity",
+      "status": "pass",
+      "enumeratedCandidates": 12,
+      "elapsedMs": 1.1848749999999981,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "small-impossible-coverage",
+      "status": "pass",
+      "enumeratedCandidates": 4,
+      "elapsedMs": 0.587333000000001,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 2,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": [
+            {
+              "taskId": "t1",
+              "missing": 1
+            },
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 2,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": [
+            {
+              "taskId": "t1",
+              "missing": 1
+            },
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "small-overlap-lock-conflict",
+      "status": "pass",
+      "result": "explicit-lock-conflict",
+      "enumeratedCandidates": 0,
+      "elapsedMs": 0.4296250000000015
+    },
+    {
+      "name": "small-skill-lock-conflict",
+      "status": "pass",
+      "result": "explicit-lock-conflict",
+      "enumeratedCandidates": 0,
+      "elapsedMs": 0.05299999999999727
+    },
+    {
+      "name": "small-capacity-lock-conflict",
+      "status": "pass",
+      "result": "explicit-lock-conflict",
+      "enumeratedCandidates": 0,
+      "elapsedMs": 0.05541600000000102
+    },
+    {
+      "name": "small-unavailable-lock-conflict",
+      "status": "pass",
+      "result": "explicit-lock-conflict",
+      "enumeratedCandidates": 0,
+      "elapsedMs": 0.01908300000000196
+    },
+    {
+      "name": "small-overstaffed-lock-conflict",
+      "status": "pass",
+      "result": "explicit-lock-conflict",
+      "enumeratedCandidates": 0,
+      "elapsedMs": 0.025708999999999094
+    },
+    {
+      "name": "small-zero-demand",
+      "status": "pass",
+      "enumeratedCandidates": 1,
+      "elapsedMs": 0.3706669999999974,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 0,
+          "required": 0,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 0,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 0,
+          "required": 0,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 0,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "small-new-lock-outside-subset-regression",
+      "status": "pass",
+      "enumeratedCandidates": 8,
+      "elapsedMs": 0.6442920000000001,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 5,
+          "squaredWorkload": 8,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 6,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-01",
+      "status": "pass",
+      "enumeratedCandidates": 23,
+      "elapsedMs": 1.3882079999999988,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-02",
+      "status": "pass",
+      "enumeratedCandidates": 25,
+      "elapsedMs": 0.868707999999998,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 3,
+          "assignmentChanges": 5,
+          "squaredWorkload": 5,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 4,
+          "assignmentChanges": 5,
+          "squaredWorkload": 3,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-03",
+      "status": "pass",
+      "enumeratedCandidates": 30,
+      "elapsedMs": 0.6561670000000035,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 6,
+          "squaredWorkload": 6,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 6,
+          "squaredWorkload": 6,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-04",
+      "status": "pass",
+      "enumeratedCandidates": 40,
+      "elapsedMs": 0.8839579999999998,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 4,
+          "assignmentChanges": 4,
+          "squaredWorkload": 6,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 4,
+          "assignmentChanges": 6,
+          "squaredWorkload": 4,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-05",
+      "status": "pass",
+      "enumeratedCandidates": 74,
+      "elapsedMs": 1.1441250000000025,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-06",
+      "status": "pass",
+      "enumeratedCandidates": 84,
+      "elapsedMs": 2.308500000000002,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 1,
+          "assignmentChanges": 1,
+          "squaredWorkload": 7,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 1,
+          "assignmentChanges": 1,
+          "squaredWorkload": 7,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-07",
+      "status": "pass",
+      "enumeratedCandidates": 28,
+      "elapsedMs": 1.0258330000000058,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 1,
+          "assignmentChanges": 1,
+          "squaredWorkload": 5,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-08",
+      "status": "pass",
+      "enumeratedCandidates": 66,
+      "elapsedMs": 1.0214169999999996,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 1,
+          "assignmentChanges": 2,
+          "squaredWorkload": 6,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 4,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-09",
+      "status": "pass",
+      "enumeratedCandidates": 20,
+      "elapsedMs": 0.9366249999999994,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 3,
+          "assignmentChanges": 5,
+          "squaredWorkload": 3,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 3,
+          "assignmentChanges": 5,
+          "squaredWorkload": 3,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-10",
+      "status": "pass",
+      "enumeratedCandidates": 24,
+      "elapsedMs": 0.4624159999999975,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 3,
+          "assignmentChanges": 5,
+          "squaredWorkload": 3,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 3,
+          "assignmentChanges": 5,
+          "squaredWorkload": 3,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-11",
+      "status": "pass",
+      "enumeratedCandidates": 35,
+      "elapsedMs": 0.9014999999999986,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 6,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 6,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-12",
+      "status": "pass",
+      "enumeratedCandidates": 236,
+      "elapsedMs": 4.356499999999997,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 1,
+          "assignmentChanges": 1,
+          "squaredWorkload": 7,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 1,
+          "assignmentChanges": 1,
+          "squaredWorkload": 7,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-13",
+      "status": "pass",
+      "enumeratedCandidates": 28,
+      "elapsedMs": 2.8071669999999997,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 4,
+          "affectedPeople": 1,
+          "assignmentChanges": 1,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 4,
+          "affectedPeople": 1,
+          "assignmentChanges": 1,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-14",
+      "status": "pass",
+      "enumeratedCandidates": 128,
+      "elapsedMs": 2.2335840000000005,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 2,
+          "assignmentChanges": 3,
+          "squaredWorkload": 7,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 2,
+          "assignmentChanges": 3,
+          "squaredWorkload": 7,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-15",
+      "status": "pass",
+      "enumeratedCandidates": 22,
+      "elapsedMs": 0.5848750000000038,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 5,
+          "affectedPeople": 2,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t1",
+              "missing": 2
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 5,
+          "affectedPeople": 2,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t1",
+              "missing": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-16",
+      "status": "pass",
+      "enumeratedCandidates": 60,
+      "elapsedMs": 1.6427090000000035,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 5,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 6,
+          "gaps": [
+            {
+              "taskId": "t1",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 5,
+          "affectedPeople": 3,
+          "assignmentChanges": 6,
+          "squaredWorkload": 4,
+          "gaps": [
+            {
+              "taskId": "t1",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-17",
+      "status": "pass",
+      "enumeratedCandidates": 76,
+      "elapsedMs": 1.517000000000003,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-18",
+      "status": "pass",
+      "enumeratedCandidates": 3,
+      "elapsedMs": 0.2308749999999975,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 1,
+          "required": 2,
+          "affectedPeople": 2,
+          "assignmentChanges": 3,
+          "squaredWorkload": 1,
+          "gaps": [
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 1,
+          "required": 2,
+          "affectedPeople": 2,
+          "assignmentChanges": 3,
+          "squaredWorkload": 1,
+          "gaps": [
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-19",
+      "status": "pass",
+      "enumeratedCandidates": 64,
+      "elapsedMs": 3.8748329999999953,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 5,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": [
+            {
+              "taskId": "t1",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 5,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": [
+            {
+              "taskId": "t1",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-20",
+      "status": "pass",
+      "enumeratedCandidates": 105,
+      "elapsedMs": 2.180374999999998,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 7,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 7,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-21",
+      "status": "pass",
+      "enumeratedCandidates": 20,
+      "elapsedMs": 0.38425000000000864,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 7,
+          "squaredWorkload": 5,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 4,
+          "affectedPeople": 4,
+          "assignmentChanges": 7,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-22",
+      "status": "pass",
+      "enumeratedCandidates": 14,
+      "elapsedMs": 0.4454159999999945,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-23",
+      "status": "pass",
+      "enumeratedCandidates": 116,
+      "elapsedMs": 1.5637499999999989,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 5,
+          "required": 6,
+          "affectedPeople": 4,
+          "assignmentChanges": 7,
+          "squaredWorkload": 7,
+          "gaps": [
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 5,
+          "required": 6,
+          "affectedPeople": 4,
+          "assignmentChanges": 7,
+          "squaredWorkload": 7,
+          "gaps": [
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-24",
+      "status": "pass",
+      "enumeratedCandidates": 32,
+      "elapsedMs": 0.7088750000000061,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 5,
+          "affectedPeople": 4,
+          "assignmentChanges": 4,
+          "squaredWorkload": 6,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 5,
+          "affectedPeople": 4,
+          "assignmentChanges": 4,
+          "squaredWorkload": 6,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-25",
+      "status": "pass",
+      "enumeratedCandidates": 110,
+      "elapsedMs": 2.2291249999999962,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 3,
+          "assignmentChanges": 5,
+          "squaredWorkload": 9,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 4,
+          "assignmentChanges": 5,
+          "squaredWorkload": 7,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-26",
+      "status": "pass",
+      "enumeratedCandidates": 110,
+      "elapsedMs": 2.287957999999989,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 0,
+          "assignmentChanges": 0,
+          "squaredWorkload": 6,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-27",
+      "status": "pass",
+      "enumeratedCandidates": 75,
+      "elapsedMs": 4.282957999999994,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 9,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 9,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-28",
+      "status": "pass",
+      "enumeratedCandidates": 74,
+      "elapsedMs": 2.5401660000000135,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-29",
+      "status": "pass",
+      "enumeratedCandidates": 15,
+      "elapsedMs": 0.3085000000000093,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 5,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 3,
+          "assignmentChanges": 5,
+          "squaredWorkload": 3,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-30",
+      "status": "pass",
+      "enumeratedCandidates": 9,
+      "elapsedMs": 0.48758300000000077,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 2,
+          "required": 2,
+          "affectedPeople": 2,
+          "assignmentChanges": 4,
+          "squaredWorkload": 2,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 2,
+          "required": 2,
+          "affectedPeople": 2,
+          "assignmentChanges": 4,
+          "squaredWorkload": 2,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-31",
+      "status": "pass",
+      "enumeratedCandidates": 112,
+      "elapsedMs": 1.4553750000000036,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 0,
+          "assignmentChanges": 0,
+          "squaredWorkload": 6,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-32",
+      "status": "pass",
+      "enumeratedCandidates": 105,
+      "elapsedMs": 1.3700000000000045,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 4,
+          "assignmentChanges": 5,
+          "squaredWorkload": 9,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 4,
+          "assignmentChanges": 5,
+          "squaredWorkload": 9,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-33",
+      "status": "pass",
+      "enumeratedCandidates": 35,
+      "elapsedMs": 0.5158749999999941,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 6,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 6,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-34",
+      "status": "pass",
+      "enumeratedCandidates": 39,
+      "elapsedMs": 0.8788330000000002,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 5,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 5,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-35",
+      "status": "pass",
+      "enumeratedCandidates": 36,
+      "elapsedMs": 0.43437500000000284,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-36",
+      "status": "pass",
+      "enumeratedCandidates": 80,
+      "elapsedMs": 2.3640829999999937,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 1,
+          "assignmentChanges": 1,
+          "squaredWorkload": 7,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 1,
+          "assignmentChanges": 1,
+          "squaredWorkload": 7,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-37",
+      "status": "pass",
+      "enumeratedCandidates": 36,
+      "elapsedMs": 1.2746669999999938,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-38",
+      "status": "pass",
+      "enumeratedCandidates": 5,
+      "elapsedMs": 0.33933299999999633,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 2,
+          "required": 2,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 2,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 2,
+          "required": 2,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 2,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-39",
+      "status": "pass",
+      "enumeratedCandidates": 4,
+      "elapsedMs": 0.4059170000000023,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 1,
+          "required": 1,
+          "affectedPeople": 2,
+          "assignmentChanges": 3,
+          "squaredWorkload": 1,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 1,
+          "required": 1,
+          "affectedPeople": 2,
+          "assignmentChanges": 3,
+          "squaredWorkload": 1,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-40",
+      "status": "pass",
+      "enumeratedCandidates": 16,
+      "elapsedMs": 2.1607920000000007,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 5,
+          "affectedPeople": 1,
+          "assignmentChanges": 1,
+          "squaredWorkload": 5,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            },
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 5,
+          "affectedPeople": 3,
+          "assignmentChanges": 5,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            },
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-41",
+      "status": "pass",
+      "enumeratedCandidates": 40,
+      "elapsedMs": 0.9666250000000076,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-42",
+      "status": "pass",
+      "enumeratedCandidates": 10,
+      "elapsedMs": 0.3037080000000003,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 2,
+          "required": 3,
+          "affectedPeople": 2,
+          "assignmentChanges": 4,
+          "squaredWorkload": 2,
+          "gaps": [
+            {
+              "taskId": "t0",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 2,
+          "required": 3,
+          "affectedPeople": 2,
+          "assignmentChanges": 4,
+          "squaredWorkload": 2,
+          "gaps": [
+            {
+              "taskId": "t0",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-43",
+      "status": "pass",
+      "enumeratedCandidates": 30,
+      "elapsedMs": 0.9670839999999998,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 3,
+          "assignmentChanges": 5,
+          "squaredWorkload": 5,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 4,
+          "assignmentChanges": 7,
+          "squaredWorkload": 3,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-44",
+      "status": "pass",
+      "enumeratedCandidates": 24,
+      "elapsedMs": 0.6565420000000017,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 4,
+          "affectedPeople": 1,
+          "assignmentChanges": 1,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t0",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 4,
+          "affectedPeople": 1,
+          "assignmentChanges": 1,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t0",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-45",
+      "status": "pass",
+      "enumeratedCandidates": 176,
+      "elapsedMs": 7.0303750000000065,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 5,
+          "required": 6,
+          "affectedPeople": 1,
+          "assignmentChanges": 1,
+          "squaredWorkload": 7,
+          "gaps": [
+            {
+              "taskId": "t0",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 5,
+          "required": 6,
+          "affectedPeople": 1,
+          "assignmentChanges": 1,
+          "squaredWorkload": 7,
+          "gaps": [
+            {
+              "taskId": "t0",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-46",
+      "status": "pass",
+      "enumeratedCandidates": 70,
+      "elapsedMs": 0.9102079999999972,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 6,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 4,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-47",
+      "status": "pass",
+      "enumeratedCandidates": 88,
+      "elapsedMs": 1.7233750000000043,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 0,
+          "assignmentChanges": 0,
+          "squaredWorkload": 6,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-48",
+      "status": "pass",
+      "enumeratedCandidates": 8,
+      "elapsedMs": 0.6929170000000084,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 2,
+          "required": 4,
+          "affectedPeople": 4,
+          "assignmentChanges": 6,
+          "squaredWorkload": 2,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            },
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 2,
+          "required": 4,
+          "affectedPeople": 4,
+          "assignmentChanges": 6,
+          "squaredWorkload": 2,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            },
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-49",
+      "status": "pass",
+      "enumeratedCandidates": 50,
+      "elapsedMs": 2.600666000000004,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 1,
+          "assignmentChanges": 1,
+          "squaredWorkload": 3,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 1,
+          "assignmentChanges": 1,
+          "squaredWorkload": 3,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-50",
+      "status": "pass",
+      "enumeratedCandidates": 10,
+      "elapsedMs": 0.36408300000000793,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 4,
+          "assignmentChanges": 7,
+          "squaredWorkload": 3,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 4,
+          "assignmentChanges": 7,
+          "squaredWorkload": 3,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-51",
+      "status": "pass",
+      "enumeratedCandidates": 42,
+      "elapsedMs": 1.485208,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 6,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 6,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            },
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 6,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 6,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            },
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-52",
+      "status": "pass",
+      "enumeratedCandidates": 15,
+      "elapsedMs": 0.28383300000000133,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 5,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t1",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 5,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t1",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-53",
+      "status": "pass",
+      "enumeratedCandidates": 2,
+      "elapsedMs": 0.5611669999999975,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 1,
+          "required": 1,
+          "affectedPeople": 4,
+          "assignmentChanges": 5,
+          "squaredWorkload": 1,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 1,
+          "required": 1,
+          "affectedPeople": 4,
+          "assignmentChanges": 5,
+          "squaredWorkload": 1,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-54",
+      "status": "pass",
+      "enumeratedCandidates": 36,
+      "elapsedMs": 0.6596670000000131,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 6,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 6,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-55",
+      "status": "pass",
+      "enumeratedCandidates": 7,
+      "elapsedMs": 0.44670899999999847,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 2,
+          "required": 4,
+          "affectedPeople": 4,
+          "assignmentChanges": 6,
+          "squaredWorkload": 2,
+          "gaps": [
+            {
+              "taskId": "t3",
+              "missing": 2
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 2,
+          "required": 4,
+          "affectedPeople": 4,
+          "assignmentChanges": 6,
+          "squaredWorkload": 2,
+          "gaps": [
+            {
+              "taskId": "t3",
+              "missing": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-56",
+      "status": "pass",
+      "enumeratedCandidates": 35,
+      "elapsedMs": 0.6025419999999997,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 4,
+          "assignmentChanges": 4,
+          "squaredWorkload": 6,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 4,
+          "assignmentChanges": 4,
+          "squaredWorkload": 6,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-57",
+      "status": "pass",
+      "enumeratedCandidates": 16,
+      "elapsedMs": 0.6848750000000052,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 5,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 4,
+          "gaps": [
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 5,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 4,
+          "gaps": [
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-58",
+      "status": "pass",
+      "enumeratedCandidates": 70,
+      "elapsedMs": 0.9027080000000041,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 4,
+          "assignmentChanges": 5,
+          "squaredWorkload": 7,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 4,
+          "assignmentChanges": 5,
+          "squaredWorkload": 7,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-59",
+      "status": "pass",
+      "enumeratedCandidates": 56,
+      "elapsedMs": 1.0717500000000086,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 0,
+          "assignmentChanges": 0,
+          "squaredWorkload": 6,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 4,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-60",
+      "status": "pass",
+      "enumeratedCandidates": 14,
+      "elapsedMs": 0.3627919999999989,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 6,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            },
+            {
+              "taskId": "t3",
+              "missing": 2
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 6,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            },
+            {
+              "taskId": "t3",
+              "missing": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-61",
+      "status": "pass",
+      "enumeratedCandidates": 35,
+      "elapsedMs": 0.5210839999999877,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 5,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            },
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 5,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            },
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-62",
+      "status": "pass",
+      "enumeratedCandidates": 50,
+      "elapsedMs": 0.9073330000000084,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 6,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 4,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-63",
+      "status": "pass",
+      "enumeratedCandidates": 3,
+      "elapsedMs": 0.17612499999999898,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 1,
+          "required": 2,
+          "affectedPeople": 4,
+          "assignmentChanges": 5,
+          "squaredWorkload": 1,
+          "gaps": [
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 1,
+          "required": 2,
+          "affectedPeople": 4,
+          "assignmentChanges": 5,
+          "squaredWorkload": 1,
+          "gaps": [
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-64",
+      "status": "pass",
+      "enumeratedCandidates": 24,
+      "elapsedMs": 0.515500000000003,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 4,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 4,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-65",
+      "status": "pass",
+      "enumeratedCandidates": 37,
+      "elapsedMs": 0.7474169999999987,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 6,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 6,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-66",
+      "status": "pass",
+      "enumeratedCandidates": 4,
+      "elapsedMs": 0.18512499999999932,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 1,
+          "required": 3,
+          "affectedPeople": 4,
+          "assignmentChanges": 5,
+          "squaredWorkload": 1,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            },
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 1,
+          "required": 3,
+          "affectedPeople": 4,
+          "assignmentChanges": 5,
+          "squaredWorkload": 1,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            },
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-67",
+      "status": "pass",
+      "enumeratedCandidates": 9,
+      "elapsedMs": 0.22879100000000108,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 2,
+          "required": 3,
+          "affectedPeople": 2,
+          "assignmentChanges": 4,
+          "squaredWorkload": 2,
+          "gaps": [
+            {
+              "taskId": "t0",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 2,
+          "required": 3,
+          "affectedPeople": 2,
+          "assignmentChanges": 4,
+          "squaredWorkload": 2,
+          "gaps": [
+            {
+              "taskId": "t0",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-68",
+      "status": "pass",
+      "enumeratedCandidates": 23,
+      "elapsedMs": 0.7731249999999932,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t2",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-69",
+      "status": "pass",
+      "enumeratedCandidates": 20,
+      "elapsedMs": 0.36608299999998906,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 5,
+          "affectedPeople": 4,
+          "assignmentChanges": 4,
+          "squaredWorkload": 6,
+          "gaps": [
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 5,
+          "affectedPeople": 4,
+          "assignmentChanges": 4,
+          "squaredWorkload": 6,
+          "gaps": [
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-70",
+      "status": "pass",
+      "enumeratedCandidates": 8,
+      "elapsedMs": 0.5257079999999945,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 2,
+          "required": 2,
+          "affectedPeople": 1,
+          "assignmentChanges": 2,
+          "squaredWorkload": 2,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 2,
+          "required": 2,
+          "affectedPeople": 1,
+          "assignmentChanges": 2,
+          "squaredWorkload": 2,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-71",
+      "status": "pass",
+      "enumeratedCandidates": 35,
+      "elapsedMs": 0.8303339999999935,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 2,
+          "assignmentChanges": 3,
+          "squaredWorkload": 5,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 4,
+          "assignmentChanges": 5,
+          "squaredWorkload": 3,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-72",
+      "status": "pass",
+      "enumeratedCandidates": 6,
+      "elapsedMs": 1.1495419999999967,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 2,
+          "required": 2,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 2,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 2,
+          "required": 2,
+          "affectedPeople": 2,
+          "assignmentChanges": 2,
+          "squaredWorkload": 2,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-73",
+      "status": "pass",
+      "enumeratedCandidates": 128,
+      "elapsedMs": 1.7767909999999887,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 2,
+          "assignmentChanges": 3,
+          "squaredWorkload": 7,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 2,
+          "assignmentChanges": 3,
+          "squaredWorkload": 7,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-74",
+      "status": "pass",
+      "enumeratedCandidates": 92,
+      "elapsedMs": 2.1165420000000097,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 5,
+          "affectedPeople": 4,
+          "assignmentChanges": 6,
+          "squaredWorkload": 4,
+          "gaps": [
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 5,
+          "affectedPeople": 4,
+          "assignmentChanges": 6,
+          "squaredWorkload": 4,
+          "gaps": [
+            {
+              "taskId": "t3",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-75",
+      "status": "pass",
+      "enumeratedCandidates": 20,
+      "elapsedMs": 0.38512499999998795,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-76",
+      "status": "pass",
+      "enumeratedCandidates": 75,
+      "elapsedMs": 1.2802500000000236,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 3,
+          "assignmentChanges": 6,
+          "squaredWorkload": 6,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 4,
+          "required": 4,
+          "affectedPeople": 4,
+          "assignmentChanges": 6,
+          "squaredWorkload": 4,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-77",
+      "status": "pass",
+      "enumeratedCandidates": 10,
+      "elapsedMs": 2.1468749999999943,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 5,
+          "affectedPeople": 2,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t0",
+              "missing": 1
+            },
+            {
+              "taskId": "t1",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 5,
+          "affectedPeople": 2,
+          "assignmentChanges": 3,
+          "squaredWorkload": 3,
+          "gaps": [
+            {
+              "taskId": "t0",
+              "missing": 1
+            },
+            {
+              "taskId": "t1",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "generated-78",
+      "status": "pass",
+      "enumeratedCandidates": 100,
+      "elapsedMs": 2.2822500000000048,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 1,
+          "assignmentChanges": 1,
+          "squaredWorkload": 9,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 5,
+          "required": 5,
+          "affectedPeople": 3,
+          "assignmentChanges": 3,
+          "squaredWorkload": 7,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-79",
+      "status": "pass",
+      "enumeratedCandidates": 7,
+      "elapsedMs": 0.7499579999999924,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 2,
+          "required": 2,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 2,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 2,
+          "required": 2,
+          "affectedPeople": 3,
+          "assignmentChanges": 4,
+          "squaredWorkload": 2,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "generated-80",
+      "status": "pass",
+      "enumeratedCandidates": 35,
+      "elapsedMs": 0.9483330000000194,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 2,
+          "assignmentChanges": 3,
+          "squaredWorkload": 5,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 3,
+          "required": 3,
+          "affectedPeople": 4,
+          "assignmentChanges": 5,
+          "squaredWorkload": 3,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "demo-default",
+      "status": "pass",
+      "enumeratedCandidates": 124740,
+      "elapsedMs": 1552.4505829999998,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 10,
+          "required": 10,
+          "affectedPeople": 3,
+          "assignmentChanges": 5,
+          "squaredWorkload": 24,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 10,
+          "required": 10,
+          "affectedPeople": 7,
+          "assignmentChanges": 9,
+          "squaredWorkload": 16,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "demo-original",
+      "status": "pass",
+      "enumeratedCandidates": null,
+      "elapsedMs": 20.159041000000116,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 9,
+          "required": 9,
+          "affectedPeople": 0,
+          "assignmentChanges": 0,
+          "squaredWorkload": 23,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 9,
+          "required": 9,
+          "affectedPeople": 7,
+          "assignmentChanges": 8,
+          "squaredWorkload": 11,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "demo-absence-only",
+      "status": "pass",
+      "enumeratedCandidates": null,
+      "elapsedMs": 11.882708999999977,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 9,
+          "required": 9,
+          "affectedPeople": 2,
+          "assignmentChanges": 4,
+          "squaredWorkload": 23,
+          "gaps": []
+        },
+        {
+          "planId": "balanced",
+          "covered": 9,
+          "required": 9,
+          "affectedPeople": 7,
+          "assignmentChanges": 8,
+          "squaredWorkload": 13,
+          "gaps": []
+        }
+      ]
+    },
+    {
+      "name": "demo-zero-facilitators",
+      "status": "pass",
+      "enumeratedCandidates": null,
+      "elapsedMs": 7.3477080000000115,
+      "plans": [
+        {
+          "planId": "minimal-change",
+          "covered": 6,
+          "required": 9,
+          "affectedPeople": 1,
+          "assignmentChanges": 3,
+          "squaredWorkload": 14,
+          "gaps": [
+            {
+              "taskId": "workshop-1",
+              "missing": 1
+            },
+            {
+              "taskId": "workshop-2",
+              "missing": 1
+            },
+            {
+              "taskId": "workshop-3",
+              "missing": 1
+            }
+          ]
+        },
+        {
+          "planId": "balanced",
+          "covered": 6,
+          "required": 9,
+          "affectedPeople": 5,
+          "assignmentChanges": 7,
+          "squaredWorkload": 8,
+          "gaps": [
+            {
+              "taskId": "workshop-1",
+              "missing": 1
+            },
+            {
+              "taskId": "workshop-2",
+              "missing": 1
+            },
+            {
+              "taskId": "workshop-3",
+              "missing": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
